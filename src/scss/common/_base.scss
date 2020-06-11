@@ -1,0 +1,27 @@
+@charset "UTF-8";
+
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css');
+@import url('http://fonts.googleapis.com/earlyaccess/notosanskr.css');
+
+/* base */
+body, h1, h2, h3, h4, h5, h6, fieldset,ul, ol, dl, dt, dd, p, button ,figure{margin:0;padding:0;}
+body{font:normal 16px/1.5 'Noto Sans KR', Apple SD Neo Gothic, "Apple SD Gothic Neo", AppleSDGothicNeo, Roboto, Droid sans, Microsoft NeoGothic, malgun gothic, sans-serif, Verdana;color:#666;letter-spacing:-1px;word-break: keep-all;
+	@include respond-to('ly-m'){			
+		font-size: 12px;
+	}
+}
+legend, caption{width:0;height:0;visibility:hidden;font-size:0;line-height:0;}
+a{text-decoration:none;color:inherit;}
+img{vertical-align:middle;}
+fieldset, button{background:none;border:0px;}
+ul:after,ol:after{content:'';display:block;clear:both;}
+li{list-style:none;}
+table{width:100%;border-spacing:0px;border-collapse:collapse;font-size:1em;}
+iframe{width:100%;vertical-align:middle;border:0 none;}
+hr{margin:1.25em 0;border:0 none;height:1px;background:#c9c9c9;}
+button, input, optgroup, select, textarea{font-family:inherit;}
+
+/* Chrome, Safari용 스크롤 바 */
+::-webkit-scrollbar{width:8px;height:8px;border:3px solid #fff;}
+::-webkit-scrollbar-track{background:#efefef;border-radius:10px;box-shadow:inset 0 0 4px rgba(0,0,0,.2)}
+::-webkit-scrollbar-thumb{height:50px;width:50px;background:rgba(0,0,0,.2);border-radius:8px;box-shadow:inset 0 0 4px rgba(0,0,0,.1)}

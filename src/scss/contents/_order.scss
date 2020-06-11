@@ -1,0 +1,791 @@
+@charset "UTF-8";
+
+.t_price{
+    color: #df1313;
+    &.black{color: #222;}
+}
+.ic_half{
+	display: inline-block;
+	vertical-align: middle;
+	&.left{
+		@include getSprite($common-ic_half_left);
+		@include respond-to('ly-m'){
+			@include getSpriteRetina($common-ic_half_left_m);
+		}
+	}
+	&.right{
+		@include getSprite($common-ic_half_right);
+		@include respond-to('ly-m'){
+			@include getSpriteRetina($common-ic_half_right_m);
+		}
+	}
+}
+.half_txt{
+	position: relative;padding-left: 25px;line-height: 20px;
+    @include respond-to('ly-m'){
+        line-height: 15px;padding-left: 20px;
+    }
+    > strong,
+	> span{
+		display: inline-block;vertical-align: top;
+		@include respond-to('ly-m'){
+			display: block;
+		}
+	}
+	.ic_half{
+		position: absolute;left: 0;top: 0;
+	}
+	.menu{
+		margin-right: 20px;
+		@include respond-to('ly-m'){
+			margin-right: 10px;
+		}
+	}
+}
+
+.order_flow{
+    padding: 2em;
+    @include respond-to('ly-m'){
+        padding: 2em 0;
+    }
+    ol{
+        li{
+            float: left;width: 16.666%;text-align: center;         
+            div{
+                position: relative;height: 40px;
+                @include respond-to('ly-m'){
+                    height: 20px;
+                }
+                &:before{
+                    content:'';display: block;position: absolute;top: 50%;left: -50%;width: 100%;height: 5px;background: #dddddd;transform: translateY(-50%);
+                    @include respond-to('ly-m'){
+                        height: 3px;
+                    }
+                }
+                strong{
+                    position: relative;display: inline-block;vertical-align: top;font-size: 0;color: #fff;width: 16px;height: 16px;margin-top: 12px;background: #ddd;border-radius: 50%;z-index: 1;
+                    @include respond-to('ly-m'){
+                        width: 8px;height: 8px;margin-top: 6px;
+                    }
+                }
+            }
+            p{
+                font-weight: bold;color: #222;margin-top: 10px;padding: 0 0.5em;
+            }
+            &:first-child div:before{display: none;}
+            &.on div{
+                &:before{
+                    background-color: #019676;
+                }
+                strong{
+                    width: 40px;height: 40px;line-height: 40px;background: #019676;font-size: 20px;margin-top: 0;
+                    @include respond-to('ly-m'){
+                        width: 20px;height: 20px;line-height: 20px;font-size: 11px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.order_detail{
+    overflow: hidden;
+    > .left{
+        float: left;width: 56.25%;
+        @include respond-to('ly-m'){
+            float: none;width: auto;
+        }
+    }
+    > .right{
+        float: right;width: 37.5%;
+        @include respond-to('ly-m'){
+            float: none;width: auto;
+        }
+    }
+    .order_flow + &{margin-top: 3em;}
+}
+
+.total_price{
+    > li{
+        border-bottom: 1px solid #ccc;padding: 10px 20px;font-size: 1.250em;
+        @include respond-to('ly-m'){
+			padding: 7px 5px;
+		}
+        > div{
+            overflow: hidden;padding: 5px 0;
+            @include respond-to('ly-m'){
+                padding: 3px 0px;
+            }
+            > strong{float: left;color: #222;}
+            > span{float: right;}
+        }
+        &.last{
+            font-size: 1.5em;
+        }
+    }
+    .pop_cont &{
+        font-size: 0.875em;
+    }
+}
+
+.order_type{
+    display: table;width: 100%;table-layout: fixed;border-collapse: collapse;
+    > a{
+        display: table-cell;width: 50%;padding: 35px 10px;vertical-align: middle;text-align: center;border: 1px solid #ddd;font-size: 1.5em;color: #888888;    
+        strong{
+            display: inline-block;vertical-align: middle;margin-left: 0.5em;
+            @include respond-to('ly-m'){
+                display: block;margin-top: 0.5em;
+            }
+        }        
+        .icon{
+            position: relative;display: inline-block;vertical-align: middle;
+            &:after{
+                content: '';display: block;position: absolute;left: 0;top: 0;opacity: 0;transition: opacity 0.2s ease;
+            }
+            &.delivery{
+                @include getSprite($order-icon_delivery);
+                @include respond-to('ly-m'){
+                    @include getSpriteRetina($order-icon_delivery);
+                }
+                &:after{
+                    @include getSprite($order-icon_delivery_on);
+                    @include respond-to('ly-m'){
+                        @include getSpriteRetina($order-icon_delivery_on);
+                    }
+                }
+            }
+            &.pickup{
+                @include getSprite($order-icon_packaging);
+                @include respond-to('ly-m'){
+                    @include getSpriteRetina($order-icon_packaging);
+                }
+                &:after{
+                    @include getSprite($order-icon_packaging_on);
+                    @include respond-to('ly-m'){
+                        @include getSpriteRetina($order-icon_packaging_on);
+                    }
+                }
+            }
+        }
+        &:hover,
+        &.on{
+            color: #129671;
+            .icon:after{
+                opacity: 1;
+            }
+        }
+        
+    }
+}
+
+.order_type_info{
+    position: relative;margin-top: 5em;
+    h4{
+        color: #222222;font-size: 1.25em;margin-bottom: 1em;
+        span{
+            font-size: 0.75em;color: #888;font-weight: normal;
+        }
+    }
+    .btn{
+        position: absolute;right: 0;top: 0;
+        .button{padding: 0 1em;}
+    }
+    .table{
+        .td_user{
+            width: 100px;
+            @include respond-to('ly-m'){
+                width: 50px;
+            }
+        }
+        .td_chk{
+            width: 30px;
+            @include respond-to('ly-m'){
+                width: 20px;
+            }
+        }
+        .td_btn{
+            width: 55px;
+            @include respond-to('ly-m'){
+                width: 35px;
+            }
+            .button{
+                width: 100%;padding: 0;
+            }
+        }
+        .th_store{
+            width: 90px;padding-right: 0;
+        }
+    }
+
+    &.dual{
+        margin-left:-40px;margin-right: -40px;
+        @include respond-to('ly-xl'){
+            margin-left:-10px;margin-right: -10px;
+        }
+        @include respond-to('ly-m'){
+            margin-left:0;margin-right:0;
+        }
+        &:after{
+            @include clearFix();
+        }
+        > div{
+            float: left;width: 50%;padding: 0 40px;box-sizing: border-box;
+            @include respond-to('ly-xl'){
+                padding: 0 10px;
+            }
+            @include respond-to('ly-m'){
+                float: none;width: auto;padding: 0;
+                + div{
+                    margin-top: 2em;
+                }
+            }
+        }
+    }
+
+    .search{
+        position: relative;padding-right: 120px;margin-bottom: 1em;
+        @include respond-to('ly-m'){
+            padding-right: 60px;
+        }
+        .button{
+            position: absolute;right: 0;top: 0;padding: 0;width: 100px;
+            @include respond-to('ly-m'){
+                width: 55px;
+            }
+        }
+    }
+
+    .tbl_scroll{
+        height: 343px;overflow: auto;border-top: 1px solid #666;border-bottom: 1px solid #ccc;
+        @include respond-to('ly-m'){
+            height: 239px;
+        }
+        .table{
+            margin: -1px 0;font-size: 0.875em;
+        }
+    }
+}
+.map_area{
+    height: 400px;background: #eaeaea;
+    @include respond-to('ly-m'){
+        height: 240px;
+    }
+}
+.pin_nation{
+    background:#222;text-align:center;color:#fff;padding:0.25em 0.5em;border-radius:5px;font-size:14px;
+    @include respond-to('ly-m'){
+        font-size: 11px;
+    }
+}
+
+.oneclick_tbl{
+    .table{
+        .td_chk{
+            width: 30px;
+            @include respond-to('ly-m'){
+                width: 20px;
+            }
+        }
+        .td_menu{
+            padding-left: 0;padding-right: 0;
+        }
+        .td_btn{
+            width: 55px;
+            @include respond-to('ly-m'){
+                width: 35px;
+            }
+            .button{
+                width: 100%;padding: 0;
+            }
+        }
+    }
+    .dot_list{margin-top: 1.5em;}
+    .ic_txt{margin-left: 2em;}
+    .summary{
+        position: relative;color: #222;padding:8px 250px 8px 110px;margin-bottom: 1em;
+        @include respond-to('ly-m'){
+            padding: 0 0 0 55px;
+        }
+        &:before{
+            content: '';display: block;position: absolute;left: 0;top: 0;
+            @include getSprite($order-bg_oneclick_box);
+            @include respond-to('ly-m'){
+                @include getSpriteRetina($order-bg_oneclick_box);
+            }
+        }
+        .btn{
+            position: absolute;right: 0;top: 0;
+            @include respond-to('ly-m'){
+                position: static;margin-top: 0.5em;
+            }
+            .button{
+                width: 120px;
+                @include respond-to('ly-m'){
+                    width: auto;
+                }
+            }
+        }
+    }
+}
+
+.tbl_menu_info{
+    &:after{
+        @include clearFix();
+    }
+    img{width: 100%;}
+    .img{
+        float: left;width: 130px;
+        @include respond-to('ly-m'){
+            display: none;
+        }
+    }    
+    .txt{
+        margin-left: 160px;
+        @include respond-to('ly-m'){
+            margin-left: 10px;
+        }
+        >strong{color: #222;}
+        ul{
+            font-size: 0.875em;
+            li{
+                margin-top: 0.5em;
+                > strong{
+                    float: left;display: block;width: 5em;color: #222;font-weight: normal;
+                }
+                > div{
+                    margin-left: 5em;
+                }
+            }
+        }
+    }
+}
+
+.order_flow2{
+    overflow: hidden;
+    > ul{
+        margin-right: -30px;
+        @include respond-to('ly-m'){
+            margin-right: -15px;
+        }
+        > li{
+            position: relative;padding: 1em 30px 1em 0;float: left;width: 33.33%;text-align: center;background: #f5f5f5;font-size: 1.25em;line-height: 1;box-sizing:border-box;
+            @include respond-to('ly-m'){
+                padding: 9px 15px 9px 0;font-size: 1em;
+            }
+            + li{
+                &:before,
+                &:after{
+                    content: '';top: 0;display: block;position: absolute;left: 0;width: 30%;height: 50%;background: #f5f5f5;border-left: 1px solid #ccc;transform: skew(45deg);transform-origin:right bottom;
+                }
+                &:after{
+                    top: 50%;transform: skew(-45deg);transform-origin:left top;
+                }
+            }
+            &.on{
+                background: #129671;font-weight: bold;color: #fff;
+                &:before,
+                &:after{
+                    background: #129671;
+                }
+            }
+            > span{
+                position: relative;z-index: 1;
+            }
+        }
+        }
+}
+
+.cart_list_wrap{
+    position: relative;padding-right:280px;min-height: 507px;
+    @include respond-to('ly-xl'){
+        padding-right:170px;min-height: 355px;
+    }
+    @include respond-to('ly-l'){
+        padding-right: 0;min-height:0;
+    }
+    .size_info{
+        position: absolute;top: 0;right: 0;
+        @include respond-to('ly-xl'){
+            width: 150px;
+        }
+        @include respond-to('ly-l'){
+            display: none;
+        }
+    }
+}
+.size_info{
+    width: 220px;
+    img{width: 100%;}
+    li + li{
+        margin-top: 9px;
+    }
+}
+.cart_list{
+    margin-top: 3em;
+    > ul{
+        border-top: 1px solid #666;
+        > li{
+            position: relative;padding: 20px 10px;border-bottom: 1px solid #cccccc;
+            @include respond-to('ly-m'){
+                padding: 10px 0;
+            }
+            &:after{
+                @include clearFix();
+            }
+            .tbl_menu_info{
+                position: relative;margin-right: 26px;                
+                @include respond-to('ly-m'){
+                    margin-right: 21px;
+                }
+                .txt{
+                    margin-right: 30%;
+                    @include respond-to('ly-m'){
+                        margin-left: 0px;margin-right: 95px;min-height:50px;
+                    }
+                    > p{
+                        font-size: 0.875em;
+                        span{
+                            margin-right: 1em;
+                            @include respond-to('ly-m'){
+                                display: block;margin-right: 0;
+                            }
+                        }
+                    }
+                }
+                .price_info{
+                    position: absolute;top: 0;right: 0;width: 30%;text-align: right;
+                    @include respond-to('ly-m'){
+                        width: auto;
+                    }
+                    
+                    .inp_spinner{
+                        float: left;
+                        @include respond-to('ly-m'){
+                            float: none;
+                        }
+                    }
+                    .price{
+                        font-size: 1.125em;line-height: 40px;color: #df1313;
+                        @include respond-to('ly-m'){
+                            line-height: 1.5;
+                        }
+                    }
+                }
+            }
+            .btn_delete{
+                display: block;position: absolute;right: 10px;top: 32px;
+                @include getSprite($order-btn-delete);
+                @include respond-to('ly-m'){
+                    right: 0;top: 17px;
+                }
+            }
+        }
+    }
+
+    .add_list{
+        margin-left: 160px;
+        @include respond-to('ly-m'){
+            margin:10px -21px -10px 0;padding: 10px;background: #f5f5f5;
+        }
+        li{
+            position: relative;font-size: 13px;line-height: 20px;overflow: hidden;padding: 4px 120px 4px 0;
+            @include respond-to('ly-m'){
+                line-height: 15px;font-size: 11px;padding-right:90px;
+            }
+            &:first-child{
+                margin-top: 5px;
+            }
+            .half_txt{
+                span{
+                    margin-right: 1em;
+                }
+            }
+
+            .price_txt{
+                position: absolute;right: 0;top: 6px;
+                @include respond-to('ly-m'){
+                    top: 7px;
+                }
+                strong{
+                    margin-left: 1em;
+                }
+                .price{
+                    font-size: 14px;color: #df1313;;
+                    @include respond-to('ly-m'){		
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+    }
+    .total{
+        padding: 0.75em;font-size: 1.5em;color: #222;border-bottom: 1px solid #cccccc;
+        &:after{
+            @include clearFix();
+        }
+        > span{
+            float: right;color: #df1313;
+        }
+    }
+}
+
+.payment_warp{
+    margin: 4em -40px 0;
+    @include respond-to('ly-xl'){
+        margin-left:-20px;margin-right:-20px;
+    }
+    @include respond-to('ly-l'){
+        margin-left:0;margin-right:0;
+    }
+    &:after{
+        @include clearFix();
+    }
+    > div{
+        float: left;padding: 0 40px;box-sizing: border-box;
+        @include respond-to('ly-xl'){
+            padding: 0 20px;
+        }
+        @include respond-to('ly-l'){
+            padding: 0;float: none;
+        }
+        &.left{
+            width: 68.75%;
+            @include respond-to('ly-l'){
+                width: auto;
+            }
+        }
+        &.right{
+            width: 31.25%;
+            @include respond-to('ly-l'){
+                width: auto;margin-top: 4em;
+            }
+            .box{
+                position: relative;padding: 20px;border: 4px solid #129671;
+                @include respond-to('ly-m'){
+                    padding: 10px;
+                }
+            }
+        }
+    }
+    .sec, .toggle_wrap{
+        margin-top: 4em;
+        &:first-child{margin-top: 0;}
+    }
+    .toggle_wrap > .cont{padding-top: 0;margin-top:-1px;}
+    h5{font-size: 1.125em;margin: 2em 0 0.5em;color: #222;}
+    .pay_cp_info{
+        margin-top: 1em;overflow: hidden;line-height: 40px;
+        @include respond-to('ly-m'){
+            line-height: 30px;
+        }
+        .button{float: right;}
+    }
+    .tbl_cp{
+        .td_sel{
+            width: 35%;
+            .select{width: 100%;}
+        }
+        .td_btn{
+            width: 100px;
+            @include respond-to('ly-m'){
+                width: 60px;
+            }
+            .button{width: 100%;padding: 0;}
+        }
+    }
+    .inp_coupon{
+        position: relative;padding: 10px;border-top: 1px solid #666;border-bottom: 1px solid #ccc;
+        @include respond-to('ly-m'){
+            padding-right: 137px;
+            &.sel{
+                padding-right: 74px;border-top: 0 none;
+            }
+        }
+        .input,
+        .select{
+            width: 300px;vertical-align: top;
+            @include respond-to('ly-m'){
+                width: 100%;
+            }
+        }
+        .btn{
+            display: inline-block;vertical-align: top;
+            @include respond-to('ly-m'){
+                position: absolute;right: 10px;top: 10px;
+            }
+            .button{
+                width:100px;padding: 0;
+                @include respond-to('ly-m'){
+                    width: 60px;
+                }
+            }
+        }
+    }
+
+    .inp_ptn_point{
+        .input{
+            width: 140px;text-align: right;margin:0 0.5em 0 1em;
+            @include respond-to('ly-m'){
+                width: 100px;
+            }
+        }
+    }
+
+    .textarea{
+        height: 100px;
+    }
+
+    .pay_price{
+        > li{
+            color: #222;font-size: 1.25em;
+            &:after{
+                @include clearFix();
+            }
+            + li{
+                margin-top: 0.75em;
+            }
+
+            strong{
+                float: left;
+            }
+            span{
+                float: right;
+            }
+            p{
+                clear: both;overflow: hidden;font-size: 0.75em;text-align: right;color: #129671;
+                span{float: left;}
+            }
+            &.last{
+                font-size:1.5em;background: #f5f5f5;margin-left: -20px;margin-right: -20px;padding: 15px 20px;
+                @include respond-to('ly-m'){
+                    margin-left: -10px;margin-right: -10px;padding: 10px;
+                }
+                span{color: #df1313;}
+            }
+        }
+    }
+    .pay_time{
+        li{
+            + li{margin-top: 1em;}
+             > div{
+                margin-left: 2em;margin-top: 0.625em;
+            }
+        }
+    }
+    .pay_type_list{
+        li{
+            margin-top: 1em;
+             > label{
+                display: block;
+                .lbl img{
+                    max-height: 22px;
+                    @include respond-to('ly-m'){
+                        max-height: 16px;
+                    }
+                }
+            }
+        }
+    }
+
+    .pay_opt{
+        margin-top: 3em;
+    }
+
+    .pay_btn{
+        margin-top: 3em;
+        &:after{
+            @include clearFix();
+        }
+        .button{
+            width: 100%;padding: 0;
+            @include respond-to('ly-l'){
+                float: left;width: 49%;
+            }
+            + .button{
+                margin-top: 20px;
+                @include respond-to('ly-l'){
+                    margin-top: 0;margin-left: 2%;
+                }
+            }
+        }
+    }
+}
+
+.ptn_list{
+    position: relative;border-top: 1px solid #666;
+    img{width: 100%;}
+    &:before{
+        content:'';display: block;position: absolute;left: 0;right: 0;bottom: 0;height: 1px;background: #ccc;
+    }
+    > li{
+        float: left;width: 50%;padding-left:10px;border-bottom: 1px solid #ccc;box-sizing:border-box;
+        @include respond-to('ly-m'){
+            float: none;width: auto;
+        }
+        label{
+            display: block;
+            &:after{
+                @include clearFix();
+            }
+        }
+        .radio{
+            float: left;margin: 35px 0;
+            @include respond-to('ly-l'){
+                margin: 27px 0;
+            }
+            @include respond-to('ly-m'){
+                margin: 17px 0;
+            }
+        }
+        .img{
+            float: left;display: block;width: 100px;padding:20px 0;margin:0 0.5em;
+            @include respond-to('ly-l'){
+                width: 70px;
+            }
+            @include respond-to('ly-m'){
+                width: 55px;padding: 10px 0;
+            }
+        }
+        .txt{
+            display: block;font-size: 0.875em;margin-left: 140px;padding:18px 10px 0;height: 6em;
+            @include respond-to('ly-l'){
+                margin-left: 110px;
+            }
+            @include respond-to('ly-m'){
+                margin-left: 82px;padding:8px 10px;height: auto;
+            }
+            strong,span{
+                display: block;
+            }
+            strong{color: #222;}
+        }
+    }
+}
+
+.order_complete{
+    position: relative;color: #222;margin: 3em 0 4em;padding-left:110px;
+    @include respond-to('ly-m'){
+        padding-left:0;
+    }
+    &:before{
+        content:'';display: block;position: absolute;left: 0;top: 50%;margin-top: -50px;
+        @include getSprite($order-icon_orderok);
+        @include respond-to('ly-m'){
+            top: 0;left:10px;margin-top:0;
+            @include getSpriteRetina($order-icon_orderok);
+        }
+    }
+    .tit{
+        font-size: 1.875em;line-height: 1.1;
+        @include respond-to('ly-m'){
+            padding-left: 60px;
+        }
+        strong{
+            color: #129671;
+        }
+    }
+    .txt{
+        margin-top: 1em;
+    }
+}

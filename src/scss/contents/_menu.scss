@@ -1,0 +1,776 @@
+@charset "UTF-8";
+
+.menu_list{
+	position: relative;padding-bottom: 5em;
+	@include respond-to('ly-m'){
+		padding-bottom: 0;
+	}
+	img{
+		width: 100%;
+	}
+	>ul{
+		margin: 0 -10px;
+		@include respond-to('ly-xl'){
+			margin: 0;
+		}
+		@include respond-to('ly-m'){
+			margin: 0 -5px;
+		}
+		> li{
+			position: relative;float:left;width: 25%;padding:0 0 45px;
+			&:nth-child(4n+1){clear: both;}
+			@include respond-to('ly-l'){
+				width: 33.33%;
+				&:nth-child(4n+1){clear: none;}
+				&:nth-child(3n+1){clear: both;}
+			}
+			@include respond-to('ly-m'){
+				width: 50%;
+				&:nth-child(3n+1){clear: none;}
+				&:nth-child(odd){clear: both;}
+			}
+			> div{
+				padding: 0 10px;
+				@include respond-to('ly-m'){
+					padding: 0 5px;
+				}
+			}
+		}
+	}
+	.menu_img{display: block;overflow: hidden;
+		img{margin: -20px 0 0;transition:all 0.5s ease;
+			@include respond-to('ly-m'){
+				margin: 0;
+			}
+		}
+		&:hover img{margin:0 0 -20px;
+			@include respond-to('ly-m'){
+				margin: 0;
+			}
+		}
+	}
+	.menu_info{
+		position: relative;margin-top: 1em;padding-right: 80px;
+		@include respond-to('ly-m'){
+			padding-right: 0;
+		}
+		.menu_name{display: block;color: #222;}
+		.menu_link{font-size:0.813em;color:#019676;
+			@include respond-to('ly-m'){
+				display: none;
+			}
+		}
+		.button{position: absolute;right: 0;top: 50%;margin-top:-20px;width:80px;padding:0;
+			@include respond-to('ly-m'){
+				display: none;
+			}
+		}
+	}
+	.menu_txt{
+		font-size: 0.813em;margin-top:1em;height:3em;
+		@include ellipsisMobile(2);
+		@include respond-to('ly-m'){
+			margin-top: 0;
+		}
+	}
+	.menu_opt{
+		position: relative;padding-right: 130px;margin-top: 1em;
+		@include respond-to('ly-xl'){
+			padding-right: 0;
+		}
+		.sel_list{width:100%;}
+		.inp_spinner{position: absolute;right:0;top:0;
+			@include respond-to('ly-xl'){
+				position: relative;width: 100%;margin-top: 5px;
+			}
+		}
+		
+	}
+	.menu_btn{
+		position: relative;padding-right: 130px;margin-top: 1em;
+		@include respond-to('ly-xl'){
+			padding-right: 0;
+		}
+		.button{padding: 0;}
+		.button:first-child{width:100%;}
+		.button:last-child{position: absolute;right:0;top:0;width:120px;
+			@include respond-to('ly-xl'){
+				position: relative;width: 100%; margin-top: 5px;
+			}
+		}
+	}
+	.btn_close{
+		position: absolute;top: -18px;right: -18px;cursor: pointer;
+		@include getSprite($common-btn_close);
+		@include respond-to('ly-xl'){
+			top: -9px;right: -9px;
+		}
+		@include respond-to('ly-m'){
+			display: none;top: -5px;right: -5px;
+			@include getSpriteRetina($common-btn_close);
+		}
+	}
+	.menu_over{display: none;
+		@include respond-to('ly-m'){
+			display: block;
+		}
+	}
+	.on{
+		z-index: 1;
+		> div{position: relative;background: #fff;padding: 20px;margin: -20px -10px;box-shadow:0 0 10px #019676;
+			@include respond-to('ly-xl'){
+				padding:20px 10px;margin: -20px 0px;
+			}
+			@include respond-to('ly-l'){
+				padding:10px;margin: -10px 0px;
+			}
+			@include respond-to('ly-m'){
+				padding:5px;margin: -5px 0px;
+			}
+		}
+		
+		.menu_info{
+			.menu_link, .button{display: none;}
+		}
+		.menu_txt{margin-top:0px;height:auto;}	
+		.menu_over{display: block;}
+	}
+}
+.menu_info_btn{
+	position: absolute;top: 0;right: 0;
+	@include respond-to('ly-m'){
+		position: static;text-align: center;
+	}
+	.button{margin: 3px;
+		@include respond-to('ly-m'){
+			margin: 2px 0 ;padding: 0 6px;font-size: 11px;
+		}
+	}
+}
+.menu_view{
+	display: table;width: 100%;background:url(../images/menu/bg_menu_view.png) no-repeat center center;background-size: cover;
+	@include respond-to('ly-l'){
+		display: block;background:none;width: auto;margin: 0 -10px;
+	}
+	img{max-width: 100%;}
+	> div{
+		display: table-cell;vertical-align: middle;
+		@include respond-to('ly-l'){
+			display: block;
+		}
+	}
+	.img{
+		text-align: center;width: 49.6%;overflow: hidden;
+		@include respond-to('ly-l'){
+			width: auto;background:url(../images/menu/bg_menu_view_m.png) no-repeat center center;background-size: cover;
+		}
+	}
+	.info{
+		padding: 18px;
+		@include respond-to('ly-l'){
+			padding: 0;
+		}
+		> div{
+			background: #fff;padding: 20px;
+			@include respond-to('ly-l'){
+				padding: 1em;
+			}
+		}		
+	}
+	.name{
+		position: relative;
+		h4{
+			color: #222;padding-right: 60px;font-size: 1.5em;
+		}
+		.btn_reset{
+			position: absolute;right: 0;top: 50%;margin-top: -8px;
+		}
+	}
+	.txt{font-size: 0.875em;margin: 1em 0;}
+	.opt{
+		position: relative;padding-left: 160px;
+		&:after{
+			@include clearFix();
+		}
+		.inp_spinner{position: absolute;left: 0;top: 0;width: 140px;}
+		.sel_list{width: 200px;}
+		@include respond-to('ly-l'){
+			padding-left: 130px;
+			.inp_spinner{width: 120px;}
+			.sel_list{width: 100%;}
+		}
+	}
+	.topping{
+		font-size: 0.875em;
+		>li{
+			position: relative;overflow: hidden;margin-top: 1.125em;
+			> strong,
+			> span{display: block;padding: 5px 0;}
+			> strong{float: left;color: #222;}
+			> span{position: absolute;right: 0;top: 0;}
+			>div{margin-left: 4.5em;}
+			@include respond-to('ly-m'){
+				> strong{float: none;display: block;}
+				>div{margin: 0 !important;}
+			}
+			&.add{
+				color: #019676;
+				&>strong{
+					color: #019676;
+				}
+				&>div{
+					margin-right: 6em;
+				}
+			}
+		}
+		.item{
+			display:inline-block;vertical-align: middle;margin: 5px;
+			.btn_del{
+				display:inline-block;vertical-align: 5px;margin-left: 5px;
+				@include getSprite($common-btn_close2);
+			}
+		}
+	}
+	.total{
+		position: relative;margin-top: 1.5em;padding-right: 40%;
+		.t_price{
+			position: absolute;right: 0;top: 0;font-size: 1.75em;line-height: 40px;
+		}
+		@include respond-to('ly-m'){
+			padding-right: 0;margin: 0;
+			.t_price{
+				position: static;text-align: right;line-height: 1.5;margin-bottom: 1em;
+			}
+		}
+	}
+}
+.btn_reset{
+	display: inline-block;vertical-align: middle;color:#019676;border-bottom: 1px solid #019676;font-size: 14px;
+	@include respond-to('ly-m'){
+		font-size: 11px;
+	}
+	&:after{
+		content: '';display: inline-block;margin-left:3px;
+		@include getSprite($common-btn_reset);
+		@include respond-to('ly-m'){
+			@include getSpriteRetina($common-btn_reset_m);
+		}
+	}
+}
+.toggle_wrap{
+	margin: 3em 0 1em;
+	> .tit{
+		position: relative;border-bottom: 1px solid #ccc;padding-right: 40px;padding-bottom: 1em;
+		@include respond-to('ly-m'){
+			padding-right: 30px;
+		}
+		&:after{
+			@include clearFix();
+		}		
+		h4{
+			display: inline-block;font-size: 1.25em;color: #ad0f14;vertical-align: middle;
+		}
+		.btn_reset{
+			float: right;margin-top: 7px;border-bottom: 0 none;
+		}
+		.btn_option_toggle{
+			position: absolute;right: 0;top: 0;padding: 9px 4px;
+			@include respond-to('ly-m'){
+				padding: 10px 3px;
+			}
+			&:after{
+				content: '';display: block;
+				@include getSprite($common-btn_toggle);
+				@include respond-to('ly-m'){
+					@include getSpriteRetina($common-btn_toggle);
+				}
+			}
+		}
+		&.black_tit{
+			h4{color: #222;}
+			.btn_option_toggle{				
+				&:after{					
+					@include getSprite($common-btn_toggle);
+					@include respond-to('ly-m'){
+						@include getSpriteRetina($common-btn_toggle);
+					}
+				}
+			}
+		}
+
+		&.red_tit{
+			background: #ad0f14;padding:5px 40px 5px 20px ;border-bottom: 0 none;
+			@include respond-to('ly-m'){
+				padding: 4px 35px 4px 10px;
+			}
+			h4{color: #fff;}
+			.btn_option_toggle{
+				padding: 14px 9px;
+				@include respond-to('ly-m'){
+					padding: 12px 10px;
+				}
+				&:after{					
+					@include getSprite($common-btn_toggle_white);
+					@include respond-to('ly-m'){
+						@include getSpriteRetina($common-btn_toggle_white);
+					}
+				}
+			}
+		}
+		
+	}
+	> .cont{position: relative;padding-top: 1em;display: none;overflow: hidden;}
+	&.on{
+		.btn_option_toggle:after{transform: rotate(-180deg)}
+		> .cont{display: block;}
+	}
+}
+.option_wrap{
+	margin: 0 -5px;
+	&:after{@include clearFix();}
+	> div{
+		float: left;width: 25%;padding:0 5px;box-sizing:border-box;
+		@include respond-to('ly-m'){
+			float: none;width: auto;margin-top: 1em;
+		}
+		> strong{display: block;color: #222;}
+		> ul{
+			margin-top: 1em;
+			li + li{margin-top: 10px;}
+			@include respond-to('ly-m'){
+				margin-top: 0.3em;
+				li{float: left;width: 50%;margin: 3px 0 !important;}
+			}
+		}
+	}
+}
+.img_radio{
+	position: relative;display:inline-block;padding:20px 10px 20px 80px;font-size: 14px;cursor: pointer;vertical-align: middle;line-height: 20px;
+	@include respond-to('ly-m'){
+		padding: 5px 5px 5px 40px;font-size: 12px;
+	}
+	i,
+	input{
+		width: 60px;height: 60px;position: absolute;left: 0;top: 0;
+		@include respond-to('ly-m'){
+			width: 30px;height: 30px;
+		}
+	}	
+	input{opacity: 0;}
+	i{
+		overflow: hidden;border-radius:50%;
+		&:before,
+		&:after{
+			content:'';display: block;position: absolute;top: 0;left:0 ;width: 100%;height: 100%;
+		}
+		&:after{transform: scale(0);opacity: 0;transition: all 0.3s ease;}
+		&.sauce_LS{
+			&:before{@include getSprite($menu-rdo_sauce_LS);}
+			&:after{@include getSprite($menu-rdo_sauce_LS_on);}
+			@include respond-to('ly-m'){
+				&:before{@include getSpriteRetina($menu-rdo_sauce_LS);}
+				&:after{@include getSpriteRetina($menu-rdo_sauce_LS_on);}
+			}
+		}
+		&.sauce_Normal{
+			&:before{@include getSprite($menu-rdo_sauce_Normal);}
+			&:after{@include getSprite($menu-rdo_sauce_Normal_on);}
+			@include respond-to('ly-m'){
+				&:before{@include getSpriteRetina($menu-rdo_sauce_Normal);}
+				&:after{@include getSpriteRetina($menu-rdo_sauce_Normal_on);}
+			}
+		}
+		&.sauce_XS{
+			&:before{@include getSprite($menu-rdo_sauce_XS);}
+			&:after{@include getSprite($menu-rdo_sauce_XS_on);}
+			@include respond-to('ly-m'){
+				&:before{@include getSpriteRetina($menu-rdo_sauce_XS);}
+				&:after{@include getSpriteRetina($menu-rdo_sauce_XS_on);}
+			}
+		}
+		&.sauce_NS{
+			&:before{@include getSprite($menu-rdo_sauce_NS);}
+			&:after{@include getSprite($menu-rdo_sauce_NS_on);}
+			@include respond-to('ly-m'){
+				&:before{@include getSpriteRetina($menu-rdo_sauce_NS);}
+				&:after{@include getSpriteRetina($menu-rdo_sauce_NS_on);}
+			}
+		}
+		&.cheese_Normal{
+			&:before{@include getSprite($menu-rdo_cheese_Normal);}
+			&:after{@include getSprite($menu-rdo_cheese_Normal_on);}
+			@include respond-to('ly-m'){
+				&:before{@include getSpriteRetina($menu-rdo_sauce_LS);}
+				&:after{@include getSpriteRetina($menu-rdo_sauce_LS_on);}
+			}
+		}
+		&.cheese_LC{
+			&:before{@include getSprite($menu-rdo_cheese_LC);}
+			&:after{@include getSprite($menu-rdo_cheese_LC_on);}
+			@include respond-to('ly-m'){
+				&:before{@include getSpriteRetina($menu-rdo_cheese_LC);}
+				&:after{@include getSpriteRetina($menu-rdo_cheese_LC_on);}
+			}
+		}
+		&.cheese_NC{
+			&:before{@include getSprite($menu-rdo_cheese_NC);}
+			&:after{@include getSprite($menu-rdo_cheese_NC_on);}
+			@include respond-to('ly-m'){
+				&:before{@include getSpriteRetina($menu-rdo_cheese_NC);}
+				&:after{@include getSpriteRetina($menu-rdo_cheese_NC_on);}
+			}
+		}
+		&.bake_Normal{
+			&:before{@include getSprite($menu-rdo_bake_Normal);}
+			&:after{@include getSprite($menu-rdo_bake_Normal_on);}
+			@include respond-to('ly-m'){
+				&:before{@include getSpriteRetina($menu-rdo_bake_Normal);}
+				&:after{@include getSpriteRetina($menu-rdo_bake_Normal_on);}
+			}
+		}
+		&.bake_WD{
+			&:before{@include getSprite($menu-rdo_bake_WD);}
+			&:after{@include getSprite($menu-rdo_bake_WD_on);}
+			@include respond-to('ly-m'){
+				&:before{@include getSpriteRetina($menu-rdo_bake_WD);}
+				&:after{@include getSpriteRetina($menu-rdo_bake_WD_on);}
+			}
+		}
+		&.cut_Normal{
+			&:before{@include getSprite($menu-rdo_cut_Normal);}
+			&:after{@include getSprite($menu-rdo_cut_Normal_on);}
+			@include respond-to('ly-m'){
+				&:before{@include getSpriteRetina($menu-rdo_cut_Normal);}
+				&:after{@include getSpriteRetina($menu-rdo_cut_Normal_on);}
+			}
+		}
+		&.cut_Square{
+			&:before{@include getSprite($menu-rdo_cut_Square);}
+			&:after{@include getSprite($menu-rdo_cut_Square_on);}
+			@include respond-to('ly-m'){
+				&:before{@include getSpriteRetina($menu-rdo_cut_Square);}
+				&:after{@include getSpriteRetina($menu-rdo_cut_Square_on);}
+			}
+		}
+		&.cut_6{
+			&:before{@include getSprite($menu-rdo_cut_6);}
+			&:after{@include getSprite($menu-rdo_cut_6_on);}
+			@include respond-to('ly-m'){
+				&:before{@include getSpriteRetina($menu-rdo_cut_6);}
+				&:after{@include getSpriteRetina($menu-rdo_cut_6_on);}
+			}
+		}
+		&.cut_8{
+			&:before{@include getSprite($menu-rdo_cut_8);}
+			&:after{@include getSprite($menu-rdo_cut_8_on);}
+			@include respond-to('ly-m'){
+				&:before{@include getSpriteRetina($menu-rdo_cut_8);}
+				&:after{@include getSpriteRetina($menu-rdo_cut_8_on);}
+			}
+		}
+		&.cut_10{
+			&:before{@include getSprite($menu-rdo_cut_10);}
+			&:after{@include getSprite($menu-rdo_cut_10_on);}
+			@include respond-to('ly-m'){
+				&:before{@include getSpriteRetina($menu-rdo_cut_10);}
+				&:after{@include getSpriteRetina($menu-rdo_cut_10_on);}
+			}
+		}
+	}
+	input:checked + i:after{transform: scale(1);opacity: 1;}
+	input:checked + i + .lbl{color: #222;font-weight: bold;}
+}
+
+.topping_list{
+	margin: 0 -10px;
+	@include respond-to('ly-m'){
+		margin: 0 -5px;
+	}
+	img{max-width: 100%;}
+	> li{
+		float: left;width: 25%;padding: 1em 10px;box-sizing: border-box;
+		@include respond-to('ly-m'){
+			width: 50%;padding: 1em 5px;
+		}
+		.img{
+			text-align: center;border: 1px solid #ddd;
+		}
+		.inp_wid{margin-top: 1em;}
+		.button.on{
+			background: #019676;border-color: #019676;color: #fff;
+		}
+	}
+}
+
+.menu_list2{
+	margin: 0 -20px;
+	@include respond-to('ly-xl'){
+		margin: 0 -10px;
+	}
+	@include respond-to('ly-m'){
+		margin: 0;
+	}
+	img{width:100%;}
+	>li{
+		float: left;padding: 20px;width: 33.33%;box-sizing: border-box;
+		@include respond-to('ly-xl'){
+			padding: 10px;
+		}		
+		@include respond-to('ly-l'){
+			width: 50%;
+		}
+		@include respond-to('ly-m'){
+			float: none;width: auto;padding: 5px 0;
+		}
+		label.item{cursor: pointer;}
+		.item{
+			position: relative;display: table;width: 100%;
+			> div,
+			> span{display: table-cell;vertical-align: middle;}
+			> input{position: absolute;left: 0;top: 0;width: 100%;height: 100%;opacity: 0;}
+			.img{position: relative;width: 45%;background: #f1f1f1;
+				@include respond-to('ly-xl'){
+					width: 40%;
+				}
+				@include respond-to('ly-m'){
+					width: 30%;
+				}
+			}
+			.txt{position: relative;padding:1em;border:1px solid #dddddd;color: #129673;font-weight: bold;
+				@include respond-to('ly-xl'){
+					padding: 10px;
+				}
+				strong{display: block;text-align: center;padding: 1em 0;}
+			}
+			
+			.radio_wrap{margin-top: 0.5em;
+				label{margin: 2px;}
+			}
+		}
+		label.item .txt{
+			color: #666;background: #f5f5f5;border: 0 none;
+		}
+		&.on{
+			.item{
+				.txt{color: #fff;background: #129673;border-color: #129673;}
+			}
+			.txt_radio .lbl{background: #fff;color: #129673;}
+		}
+	}
+	&.col4{
+		margin: 0 -15px;
+		@include respond-to('ly-xl'){
+			margin: 0 -10px;
+		}
+		@include respond-to('ly-m'){
+			margin: 0 -5px;
+		}
+		>li{
+			width: 25%;padding: 15px;
+			@include respond-to('ly-xl'){
+				padding: 10px;
+			}
+			@include respond-to('ly-l'){
+				width: 33.33%;
+			}
+			@include respond-to('ly-m'){
+				float: left;
+				padding: 5px;
+				width: 50%;
+				.img{width: 40%;}
+			}
+		}
+	}
+}
+
+.txt_radio{
+	position:relative;display:inline-block;vertical-align: middle; cursor: pointer;font-size: 1.25em;
+	input{position: absolute;left: 0;top: 0;width: 100%;height: 100%;opacity: 0;}
+	.lbl{position: relative;display:block;width: 36px;line-height:36px;background: #129673;color: #fff;text-align: center;border-radius: 5px;font-weight: bold;
+		@include respond-to('ly-m'){
+			width: 24px;line-height: 24px;
+		}
+	}
+	
+	input:checked + .lbl{background: #ad0f14 !important;color: #fff !important;}
+}
+
+.menu_choice_info{
+	position: relative;background: #f5f5f5;padding: 0 20px;margin: 3em 0;
+	@include respond-to('ly-m'){
+		padding: 0 10px;margin: 3em -10px;
+	}
+	.top{
+		position: relative;padding: 15px  50px;
+		@include respond-to('ly-m'){
+			padding: 10px 25px;	
+		}
+		&:before{
+			content:'';display: block;position: absolute;left: 0;top: 50%;margin-top: -13px;
+			@include getSprite($common-ic_arrow);
+			@include respond-to('ly-m'){
+				margin-top: -6px;
+				@include getSpriteRetina($common-ic_arrow);
+			}
+		}
+		h4{color: #222;font-size: 1.25em;display: inline;}
+	}
+	.cont{
+		padding: 1.5em;border-top: 1px solid #ddd;
+		@include respond-to('ly-l'){
+			padding: 1.5em 0;
+		}
+		li{
+			position: relative;float: left;width: 33.33%;box-sizing: border-box;padding: 0 20px;text-align: center;
+			@include respond-to('ly-m'){
+				float: none;width: auto;padding: 0;
+			}
+			&.only{
+				float: none;width: auto;
+			}
+			&:after{
+				@include clearFix();
+			}
+			+li:before{
+				content:'';display: block;position: absolute;left: -15px;top:15px;
+				@include getSprite($common-ic_plus);
+				@include respond-to('ly-m'){
+					position: static;margin:10px auto;
+					@include getSpriteRetina($common-ic_plus);
+				}
+			}
+			&.total{
+				.opt{
+					font-size: 0.875em;
+					strong{color: #222;}
+					@include respond-to('ly-m'){
+						float: left;padding: 0.5em 0;
+					}
+				}
+				.price{font-size: 1.5em;color: #019676;margin-top: 0.25em;
+					@include respond-to('ly-m'){
+						float: right;margin: 0;
+					}
+					span{color: #666;font-size: 0.75em;text-decoration: line-through;margin-right: 1em;}
+				}
+				&:before{
+					@include getSprite($common-ic_equal);
+					@include respond-to('ly-m'){
+						@include getSpriteRetina($common-ic_equal);
+					}
+				}
+				.btn{clear: both;padding-top: 0.75em;}
+				.button{width:120px;padding: 0;}
+				&.only{
+					position: relative;text-align: left;padding-right: 130px;
+					@include respond-to('ly-m'){
+						padding-right: 0;text-align: center;
+					}
+					.opt{float: left;
+						@include respond-to('ly-m'){
+							float: none;
+						}
+					}
+					.price{float: right;line-height: 1;margin-top: 0;
+						@include respond-to('ly-m'){
+							float: none;margin: 0.5em 0;
+						}
+					}
+					.btn{
+						position: absolute;right: 0;top: 50%;margin-top: -20px;padding-top: 0;
+						@include respond-to('ly-m'){
+							position: static;margin-top: 0;
+						}
+					}
+				}
+			}
+		}
+		.half_txt{
+			display: inline-block;text-align: left;
+			@include respond-to('ly-m'){
+				display: block;
+			}
+			> span{
+				display: block;font-size:0.875em;margin-top:0.5em;
+				@include respond-to('ly-m'){
+					display: inline-block;margin-right: 10px;
+					&.t_red{
+						float: right;margin-right: 0;
+					}
+				}
+			}
+		}
+	}
+	.btn_close{
+		display: inline-block;position: absolute;right: 20px;top: 12px;
+		@include getSprite($common-btn_close);
+		@include respond-to('ly-m'){
+			top:13px;
+			@include getSpriteRetina($common-btn_close);
+		}
+	}
+}
+
+.ecoupon_wrap{
+	padding: 1em 0;
+	&:after{
+		@include clearFix();
+	}
+	.left{float: left;width: 44.5%;
+		@include respond-to('ly-l'){
+			float: none;width: auto;
+		}
+	}
+	.right{float: right;width: 51.5%;
+		@include respond-to('ly-l'){
+			float: none;width: auto;margin-top: 2em;
+		}
+		> .inp_wid{margin-bottom: 2em;}
+	}
+}
+.ecoupon_box{
+	position: relative;padding-right: 100px;overflow: hidden;min-height: 275px;max-width:570px;margin: 0 auto;
+	@include respond-to('ly-m'){
+		padding-right: 50px;min-height: 185px;
+	}
+	> div{
+		padding: 20px;
+		@include respond-to('ly-m'){
+			padding: 10px;
+		}
+	}	
+	&:before,&:after{
+		content: '';display: block;position: absolute;
+	}
+	&:before{
+		top: 0;right: 0;bottom: 0;left: 0;border: 1px solid #ddd;
+	}
+	&:after{
+		right: -21px;top: 50%;width: 40px;height: 50px;margin-top: -26px;border: 1px solid #ddd;border-radius: 20px;background: #fff;
+		@include respond-to('ly-m'){
+			right: -11px;width: 20px;height: 26px;margin-top: -14px;border-radius: 10px;
+		}
+	}
+	.img{text-align: center;margin-bottom: 1em;
+		img{max-width:40%;}
+	}	
+	.tail{
+		position: absolute;right:0;width:100px;top:0;height:100%;padding: 0;border-left: 1px dashed #ddd;text-align: center;
+		@include respond-to('ly-m'){
+			width: 50px;
+		}
+		p{
+			position: absolute;left: 20px;top: 0;height: 100%;writing-mode:vertical-rl;font-size:1.5em;color:#129673;transform:rotate(180deg);font-weight: bold;
+			@include respond-to('ly-m'){
+				left:5px;font-size: 1.25em;
+			}
+		}
+	}
+	.none{padding: 1em 0;text-align: center;}
+	.name{font-weight: bold;color: #ad0f14;padding-bottom: 0.3em;}
+	.opt{font-size: 0.875em;margin-top: 0.3em;
+		span{display: inline-block;
+			&:first-child{width: 15em;}
+		}
+	}
+}

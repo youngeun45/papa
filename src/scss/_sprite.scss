@@ -1,0 +1,264 @@
+// SCSS variables are information about icon's compiled state, stored under its original file name
+//
+// .icon-home {
+//   width: $icon-home-width;
+// }
+//
+// The large array-like variables contain all information about a single icon
+// $icon-home: x y offset_x offset_y width height total_width total_height image_path;
+//
+// At the bottom of this section, we provide information about the spritesheet itself
+// $spritesheet: width height image $spritesheet-sprites;
+    $common-btnTop: (942px, 596px, -942px, -596px, 32px, 34px, 980px, 976px, '../../dist/sprite.png', 'common-btnTop', '../../dist/sprite.png?1524701067267');
+    $common-btn_close: (942px, 560px, -942px, -560px, 36px, 36px, 980px, 976px, '../../dist/sprite.png', 'common-btn_close', '../../dist/sprite.png?1524701067267');
+    $common-btn_close2: (964px, 646px, -964px, -646px, 16px, 16px, 980px, 976px, '../../dist/sprite.png', 'common-btn_close2', '../../dist/sprite.png?1524701067267');
+    $common-btn_datepicker: (910px, 840px, -910px, -840px, 24px, 24px, 980px, 976px, '../../dist/sprite.png', 'common-btn_datepicker', '../../dist/sprite.png?1524701067267');
+    $common-btn_history_prev: (522px, 472px, -522px, -472px, 44px, 44px, 980px, 976px, '../../dist/sprite.png', 'common-btn_history_prev', '../../dist/sprite.png?1524701067267');
+    $common-btn_monthNext: (974px, 82px, -974px, -82px, 6px, 10px, 980px, 976px, '../../dist/sprite.png', 'common-btn_monthNext', '../../dist/sprite.png?1524701067267');
+    $common-btn_monthPrev: (974px, 72px, -974px, -72px, 6px, 10px, 980px, 976px, '../../dist/sprite.png', 'common-btn_monthPrev', '../../dist/sprite.png?1524701067267');
+    $common-btn_reset: (862px, 346px, -862px, -346px, 16px, 13px, 980px, 976px, '../../dist/sprite.png', 'common-btn_reset', '../../dist/sprite.png?1524701067267');
+    $common-btn_reset_m: (852px, 596px, -852px, -596px, 22px, 20px, 980px, 976px, '../../dist/sprite.png', 'common-btn_reset_m', '../../dist/sprite.png?1524701067267');
+    $common-btn_toggle: (732px, 634px, -732px, -634px, 22px, 12px, 980px, 976px, '../../dist/sprite.png', 'common-btn_toggle', '../../dist/sprite.png?1524701067267');
+    $common-btn_toggle_white: (852px, 616px, -852px, -616px, 22px, 12px, 980px, 976px, '../../dist/sprite.png', 'common-btn_toggle_white', '../../dist/sprite.png?1524701067267');
+    $common-foot_blog: (852px, 488px, -852px, -488px, 22px, 22px, 980px, 976px, '../../dist/sprite.png', 'common-foot_blog', '../../dist/sprite.png?1524701067267');
+    $common-foot_facebook: (852px, 520px, -852px, -520px, 22px, 22px, 980px, 976px, '../../dist/sprite.png', 'common-foot_facebook', '../../dist/sprite.png?1524701067267');
+    $common-foot_insta: (852px, 466px, -852px, -466px, 22px, 22px, 980px, 976px, '../../dist/sprite.png', 'common-foot_insta', '../../dist/sprite.png?1524701067267');
+    $common-foot_link: (0px, 672px, 0px, -672px, 336px, 36px, 980px, 976px, '../../dist/sprite.png', 'common-foot_link', '../../dist/sprite.png?1524701067267');
+    $common-foot_link_m: (0px, 0px, 0px, 0px, 582px, 58px, 980px, 976px, '../../dist/sprite.png', 'common-foot_link_m', '../../dist/sprite.png?1524701067267');
+    $common-foot_twitter: (852px, 542px, -852px, -542px, 22px, 22px, 980px, 976px, '../../dist/sprite.png', 'common-foot_twitter', '../../dist/sprite.png?1524701067267');
+    $common-gnb_cart: (0px, 922px, 0px, -922px, 44px, 54px, 980px, 976px, '../../dist/sprite.png', 'common-gnb_cart', '../../dist/sprite.png?1524701067267');
+    $common-gnb_cart_on: (44px, 922px, -44px, -922px, 44px, 54px, 980px, 976px, '../../dist/sprite.png', 'common-gnb_cart_on', '../../dist/sprite.png?1524701067267');
+    $common-gnb_click: (112px, 866px, -112px, -866px, 56px, 54px, 980px, 976px, '../../dist/sprite.png', 'common-gnb_click', '../../dist/sprite.png?1524701067267');
+    $common-gnb_click_on: (168px, 866px, -168px, -866px, 56px, 54px, 980px, 976px, '../../dist/sprite.png', 'common-gnb_click_on', '../../dist/sprite.png?1524701067267');
+    $common-gnb_login: (942px, 126px, -942px, -126px, 32px, 54px, 980px, 976px, '../../dist/sprite.png', 'common-gnb_login', '../../dist/sprite.png?1524701067267');
+    $common-gnb_login_on: (942px, 72px, -942px, -72px, 32px, 54px, 980px, 976px, '../../dist/sprite.png', 'common-gnb_login_on', '../../dist/sprite.png?1524701067267');
+    $common-gnb_m_customer: (532px, 708px, -532px, -708px, 72px, 46px, 980px, 976px, '../../dist/sprite.png', 'common-gnb_m_customer', '../../dist/sprite.png?1524701067267');
+    $common-gnb_m_franchise: (450px, 472px, -450px, -472px, 72px, 46px, 980px, 976px, '../../dist/sprite.png', 'common-gnb_m_franchise', '../../dist/sprite.png?1524701067267');
+    $common-gnb_m_menu: (604px, 708px, -604px, -708px, 72px, 46px, 980px, 976px, '../../dist/sprite.png', 'common-gnb_m_menu', '../../dist/sprite.png?1524701067267');
+    $common-gnb_m_off: (852px, 564px, -852px, -564px, 28px, 16px, 980px, 976px, '../../dist/sprite.png', 'common-gnb_m_off', '../../dist/sprite.png?1524701067267');
+    $common-gnb_m_on: (852px, 580px, -852px, -580px, 28px, 16px, 980px, 976px, '../../dist/sprite.png', 'common-gnb_m_on', '../../dist/sprite.png?1524701067267');
+    $common-gnb_m_papajohns: (460px, 708px, -460px, -708px, 72px, 46px, 980px, 976px, '../../dist/sprite.png', 'common-gnb_m_papajohns', '../../dist/sprite.png?1524701067267');
+    $common-gnb_m_promotion: (388px, 708px, -388px, -708px, 72px, 46px, 980px, 976px, '../../dist/sprite.png', 'common-gnb_m_promotion', '../../dist/sprite.png?1524701067267');
+    $common-gnb_m_store: (316px, 708px, -316px, -708px, 72px, 46px, 980px, 976px, '../../dist/sprite.png', 'common-gnb_m_store', '../../dist/sprite.png?1524701067267');
+    $common-gnb_mypage: (224px, 866px, -224px, -866px, 54px, 54px, 980px, 976px, '../../dist/sprite.png', 'common-gnb_mypage', '../../dist/sprite.png?1524701067267');
+    $common-gnb_mypage_on: (828px, 782px, -828px, -782px, 54px, 54px, 980px, 976px, '../../dist/sprite.png', 'common-gnb_mypage_on', '../../dist/sprite.png?1524701067267');
+    $common-gnb_online: (278px, 866px, -278px, -866px, 54px, 54px, 980px, 976px, '../../dist/sprite.png', 'common-gnb_online', '../../dist/sprite.png?1524701067267');
+    $common-gnb_online_on: (332px, 866px, -332px, -866px, 54px, 54px, 980px, 976px, '../../dist/sprite.png', 'common-gnb_online_on', '../../dist/sprite.png?1524701067267');
+    $common-ic_arrow: (882px, 840px, -882px, -840px, 28px, 26px, 980px, 976px, '../../dist/sprite.png', 'common-ic_arrow', '../../dist/sprite.png?1524701067267');
+    $common-ic_equal: (942px, 822px, -942px, -822px, 30px, 30px, 980px, 976px, '../../dist/sprite.png', 'common-ic_equal', '../../dist/sprite.png?1524701067267');
+    $common-ic_half_left: (862px, 288px, -862px, -288px, 20px, 20px, 980px, 976px, '../../dist/sprite.png', 'common-ic_half_left', '../../dist/sprite.png?1524701067267');
+    $common-ic_half_left_m: (942px, 882px, -942px, -882px, 30px, 30px, 980px, 976px, '../../dist/sprite.png', 'common-ic_half_left_m', '../../dist/sprite.png?1524701067267');
+    $common-ic_half_right: (862px, 308px, -862px, -308px, 20px, 20px, 980px, 976px, '../../dist/sprite.png', 'common-ic_half_right', '../../dist/sprite.png?1524701067267');
+    $common-ic_half_right_m: (852px, 436px, -852px, -436px, 30px, 30px, 980px, 976px, '../../dist/sprite.png', 'common-ic_half_right_m', '../../dist/sprite.png?1524701067267');
+    $common-ic_plus: (942px, 672px, -942px, -672px, 30px, 30px, 980px, 976px, '../../dist/sprite.png', 'common-ic_plus', '../../dist/sprite.png?1524701067267');
+    $common-icon_arr: (942px, 630px, -942px, -630px, 22px, 42px, 980px, 976px, '../../dist/sprite.png', 'common-icon_arr', '../../dist/sprite.png?1524701067267');
+    $common-logo: (732px, 288px, -732px, -288px, 130px, 118px, 980px, 976px, '../../dist/sprite.png', 'common-logo', '../../dist/sprite.png?1524701067267');
+    $common-logo_m: (582px, 450px, -582px, -450px, 74px, 68px, 980px, 976px, '../../dist/sprite.png', 'common-logo_m', '../../dist/sprite.png?1524701067267');
+    $common-paging_first: (942px, 256px, -942px, -256px, 38px, 38px, 980px, 976px, '../../dist/sprite.png', 'common-paging_first', '../../dist/sprite.png?1524701067267');
+    $common-paging_first_on: (942px, 522px, -942px, -522px, 38px, 38px, 980px, 976px, '../../dist/sprite.png', 'common-paging_first_on', '../../dist/sprite.png?1524701067267');
+    $common-paging_last: (942px, 180px, -942px, -180px, 38px, 38px, 980px, 976px, '../../dist/sprite.png', 'common-paging_last', '../../dist/sprite.png?1524701067267');
+    $common-paging_last_on: (942px, 218px, -942px, -218px, 38px, 38px, 980px, 976px, '../../dist/sprite.png', 'common-paging_last_on', '../../dist/sprite.png?1524701067267');
+    $common-paging_next: (942px, 332px, -942px, -332px, 38px, 38px, 980px, 976px, '../../dist/sprite.png', 'common-paging_next', '../../dist/sprite.png?1524701067267');
+    $common-paging_next_on: (942px, 294px, -942px, -294px, 38px, 38px, 980px, 976px, '../../dist/sprite.png', 'common-paging_next_on', '../../dist/sprite.png?1524701067267');
+    $common-paging_prev: (942px, 370px, -942px, -370px, 38px, 38px, 980px, 976px, '../../dist/sprite.png', 'common-paging_prev', '../../dist/sprite.png?1524701067267');
+    $common-paging_prev_on: (942px, 484px, -942px, -484px, 38px, 38px, 980px, 976px, '../../dist/sprite.png', 'common-paging_prev_on', '../../dist/sprite.png?1524701067267');
+    $common-pop_close: (942px, 762px, -942px, -762px, 30px, 30px, 980px, 976px, '../../dist/sprite.png', 'common-pop_close', '../../dist/sprite.png?1524701067267');
+    $common-quick_click: (494px, 866px, -494px, -866px, 54px, 50px, 980px, 976px, '../../dist/sprite.png', 'common-quick_click', '../../dist/sprite.png?1524701067267');
+    $common-quick_membership: (440px, 866px, -440px, -866px, 54px, 50px, 980px, 976px, '../../dist/sprite.png', 'common-quick_membership', '../../dist/sprite.png?1524701067267');
+    $common-quick_sale: (386px, 866px, -386px, -866px, 54px, 50px, 980px, 976px, '../../dist/sprite.png', 'common-quick_sale', '../../dist/sprite.png?1524701067267');
+    $common-sel_list: (964px, 662px, -964px, -662px, 12px, 8px, 980px, 976px, '../../dist/sprite.png', 'common-sel_list', '../../dist/sprite.png?1524701067267');
+    $common-spinner_minus: (942px, 408px, -942px, -408px, 38px, 38px, 980px, 976px, '../../dist/sprite.png', 'common-spinner_minus', '../../dist/sprite.png?1524701067267');
+    $common-spinner_minus_m: (0px, 866px, 0px, -866px, 56px, 56px, 980px, 976px, '../../dist/sprite.png', 'common-spinner_minus_m', '../../dist/sprite.png?1524701067267');
+    $common-spinner_plus: (942px, 446px, -942px, -446px, 38px, 38px, 980px, 976px, '../../dist/sprite.png', 'common-spinner_plus', '../../dist/sprite.png?1524701067267');
+    $common-spinner_plus_m: (56px, 866px, -56px, -866px, 56px, 56px, 980px, 976px, '../../dist/sprite.png', 'common-spinner_plus_m', '../../dist/sprite.png?1524701067267');
+    $common-swiper_left: (530px, 372px, -530px, -372px, 38px, 72px, 980px, 976px, '../../dist/sprite.png', 'common-swiper_left', '../../dist/sprite.png?1524701067267');
+    $common-swiper_right: (942px, 0px, -942px, 0px, 38px, 72px, 980px, 976px, '../../dist/sprite.png', 'common-swiper_right', '../../dist/sprite.png?1524701067267');
+    $cscenter-ico_delivery: (852px, 406px, -852px, -406px, 30px, 30px, 980px, 976px, '../../dist/sprite.png', 'cscenter-ico_delivery', '../../dist/sprite.png?1524701067267');
+    $cscenter-ico_packaging: (942px, 792px, -942px, -792px, 30px, 30px, 980px, 976px, '../../dist/sprite.png', 'cscenter-ico_packaging', '../../dist/sprite.png?1524701067267');
+    $cscenter-ico_restaurant: (942px, 852px, -942px, -852px, 30px, 30px, 980px, 976px, '../../dist/sprite.png', 'cscenter-ico_restaurant', '../../dist/sprite.png?1524701067267');
+    $member-icon_ipin: (54px, 782px, -54px, -782px, 54px, 84px, 980px, 976px, '../../dist/sprite.png', 'member-icon_ipin', '../../dist/sprite.png?1524701067267');
+    $member-icon_mobile: (0px, 782px, 0px, -782px, 54px, 84px, 980px, 976px, '../../dist/sprite.png', 'member-icon_mobile', '../../dist/sprite.png?1524701067267');
+    $member-join_logo: (0px, 58px, 0px, -58px, 180px, 164px, 980px, 976px, '../../dist/sprite.png', 'member-join_logo', '../../dist/sprite.png?1524701067267');
+    $member-membership_level_bg: (732px, 148px, -732px, -148px, 146px, 140px, 980px, 976px, '../../dist/sprite.png', 'member-membership_level_bg', '../../dist/sprite.png?1524701067267');
+    $member-membership_level_rvip: (234px, 708px, -234px, -708px, 82px, 56px, 980px, 976px, '../../dist/sprite.png', 'member-membership_level_rvip', '../../dist/sprite.png?1524701067267');
+    $member-membership_level_vip: (152px, 708px, -152px, -708px, 82px, 56px, 980px, 976px, '../../dist/sprite.png', 'member-membership_level_vip', '../../dist/sprite.png?1524701067267');
+    $member-membership_level_vvip: (70px, 708px, -70px, -708px, 82px, 56px, 980px, 976px, '../../dist/sprite.png', 'member-membership_level_vvip', '../../dist/sprite.png?1524701067267');
+    $member-membership_pizza1: (330px, 58px, -330px, -58px, 150px, 150px, 980px, 976px, '../../dist/sprite.png', 'member-membership_pizza1', '../../dist/sprite.png?1524701067267');
+    $member-membership_pizza10: (300px, 222px, -300px, -222px, 150px, 150px, 980px, 976px, '../../dist/sprite.png', 'member-membership_pizza10', '../../dist/sprite.png?1524701067267');
+    $member-membership_pizza2: (0px, 372px, 0px, -372px, 150px, 150px, 980px, 976px, '../../dist/sprite.png', 'member-membership_pizza2', '../../dist/sprite.png?1524701067267');
+    $member-membership_pizza3: (150px, 372px, -150px, -372px, 150px, 150px, 980px, 976px, '../../dist/sprite.png', 'member-membership_pizza3', '../../dist/sprite.png?1524701067267');
+    $member-membership_pizza4: (300px, 372px, -300px, -372px, 150px, 150px, 980px, 976px, '../../dist/sprite.png', 'member-membership_pizza4', '../../dist/sprite.png?1524701067267');
+    $member-membership_pizza5: (582px, 0px, -582px, 0px, 150px, 150px, 980px, 976px, '../../dist/sprite.png', 'member-membership_pizza5', '../../dist/sprite.png?1524701067267');
+    $member-membership_pizza6: (582px, 150px, -582px, -150px, 150px, 150px, 980px, 976px, '../../dist/sprite.png', 'member-membership_pizza6', '../../dist/sprite.png?1524701067267');
+    $member-membership_pizza7: (582px, 300px, -582px, -300px, 150px, 150px, 980px, 976px, '../../dist/sprite.png', 'member-membership_pizza7', '../../dist/sprite.png?1524701067267');
+    $member-membership_pizza8: (150px, 522px, -150px, -522px, 150px, 150px, 980px, 976px, '../../dist/sprite.png', 'member-membership_pizza8', '../../dist/sprite.png?1524701067267');
+    $member-membership_pizza9: (300px, 522px, -300px, -522px, 150px, 150px, 980px, 976px, '../../dist/sprite.png', 'member-membership_pizza9', '../../dist/sprite.png?1524701067267');
+    $member-membership_pizza_bg: (732px, 0px, -732px, 0px, 150px, 148px, 980px, 976px, '../../dist/sprite.png', 'member-membership_pizza_bg', '../../dist/sprite.png?1524701067267');
+    $member-pizza_03: (180px, 58px, -180px, -58px, 150px, 150px, 980px, 976px, '../../dist/sprite.png', 'member-pizza_03', '../../dist/sprite.png?1524701067267');
+    $menu-rdo_bake_Normal: (468px, 782px, -468px, -782px, 60px, 60px, 980px, 976px, '../../dist/sprite.png', 'menu-rdo_bake_Normal', '../../dist/sprite.png?1524701067267');
+    $menu-rdo_bake_Normal_on: (408px, 782px, -408px, -782px, 60px, 60px, 980px, 976px, '../../dist/sprite.png', 'menu-rdo_bake_Normal_on', '../../dist/sprite.png?1524701067267');
+    $menu-rdo_bake_WD: (348px, 782px, -348px, -782px, 60px, 60px, 980px, 976px, '../../dist/sprite.png', 'menu-rdo_bake_WD', '../../dist/sprite.png?1524701067267');
+    $menu-rdo_bake_WD_on: (288px, 782px, -288px, -782px, 60px, 60px, 980px, 976px, '../../dist/sprite.png', 'menu-rdo_bake_WD_on', '../../dist/sprite.png?1524701067267');
+    $menu-rdo_cheese_LC: (228px, 782px, -228px, -782px, 60px, 60px, 980px, 976px, '../../dist/sprite.png', 'menu-rdo_cheese_LC', '../../dist/sprite.png?1524701067267');
+    $menu-rdo_cheese_LC_on: (168px, 782px, -168px, -782px, 60px, 60px, 980px, 976px, '../../dist/sprite.png', 'menu-rdo_cheese_LC_on', '../../dist/sprite.png?1524701067267');
+    $menu-rdo_cheese_NC: (882px, 660px, -882px, -660px, 60px, 60px, 980px, 976px, '../../dist/sprite.png', 'menu-rdo_cheese_NC', '../../dist/sprite.png?1524701067267');
+    $menu-rdo_cheese_NC_on: (882px, 600px, -882px, -600px, 60px, 60px, 980px, 976px, '../../dist/sprite.png', 'menu-rdo_cheese_NC_on', '../../dist/sprite.png?1524701067267');
+    $menu-rdo_cheese_Normal: (882px, 540px, -882px, -540px, 60px, 60px, 980px, 976px, '../../dist/sprite.png', 'menu-rdo_cheese_Normal', '../../dist/sprite.png?1524701067267');
+    $menu-rdo_cheese_Normal_on: (882px, 480px, -882px, -480px, 60px, 60px, 980px, 976px, '../../dist/sprite.png', 'menu-rdo_cheese_Normal_on', '../../dist/sprite.png?1524701067267');
+    $menu-rdo_cut_10: (882px, 420px, -882px, -420px, 60px, 60px, 980px, 976px, '../../dist/sprite.png', 'menu-rdo_cut_10', '../../dist/sprite.png?1524701067267');
+    $menu-rdo_cut_10_on: (882px, 360px, -882px, -360px, 60px, 60px, 980px, 976px, '../../dist/sprite.png', 'menu-rdo_cut_10_on', '../../dist/sprite.png?1524701067267');
+    $menu-rdo_cut_6: (882px, 240px, -882px, -240px, 60px, 60px, 980px, 976px, '../../dist/sprite.png', 'menu-rdo_cut_6', '../../dist/sprite.png?1524701067267');
+    $menu-rdo_cut_6_on: (882px, 180px, -882px, -180px, 60px, 60px, 980px, 976px, '../../dist/sprite.png', 'menu-rdo_cut_6_on', '../../dist/sprite.png?1524701067267');
+    $menu-rdo_cut_8: (882px, 120px, -882px, -120px, 60px, 60px, 980px, 976px, '../../dist/sprite.png', 'menu-rdo_cut_8', '../../dist/sprite.png?1524701067267');
+    $menu-rdo_cut_8_on: (882px, 60px, -882px, -60px, 60px, 60px, 980px, 976px, '../../dist/sprite.png', 'menu-rdo_cut_8_on', '../../dist/sprite.png?1524701067267');
+    $menu-rdo_cut_Normal: (882px, 0px, -882px, 0px, 60px, 60px, 980px, 976px, '../../dist/sprite.png', 'menu-rdo_cut_Normal', '../../dist/sprite.png?1524701067267');
+    $menu-rdo_cut_Normal_on: (768px, 782px, -768px, -782px, 60px, 60px, 980px, 976px, '../../dist/sprite.png', 'menu-rdo_cut_Normal_on', '../../dist/sprite.png?1524701067267');
+    $menu-rdo_cut_Square: (708px, 782px, -708px, -782px, 60px, 60px, 980px, 976px, '../../dist/sprite.png', 'menu-rdo_cut_Square', '../../dist/sprite.png?1524701067267');
+    $menu-rdo_cut_Square_on: (648px, 782px, -648px, -782px, 60px, 60px, 980px, 976px, '../../dist/sprite.png', 'menu-rdo_cut_Square_on', '../../dist/sprite.png?1524701067267');
+    $menu-rdo_sauce_LS: (588px, 782px, -588px, -782px, 60px, 60px, 980px, 976px, '../../dist/sprite.png', 'menu-rdo_sauce_LS', '../../dist/sprite.png?1524701067267');
+    $menu-rdo_sauce_LS_on: (528px, 782px, -528px, -782px, 60px, 60px, 980px, 976px, '../../dist/sprite.png', 'menu-rdo_sauce_LS_on', '../../dist/sprite.png?1524701067267');
+    $menu-rdo_sauce_NS: (882px, 720px, -882px, -720px, 60px, 60px, 980px, 976px, '../../dist/sprite.png', 'menu-rdo_sauce_NS', '../../dist/sprite.png?1524701067267');
+    $menu-rdo_sauce_NS_on: (882px, 300px, -882px, -300px, 60px, 60px, 980px, 976px, '../../dist/sprite.png', 'menu-rdo_sauce_NS_on', '../../dist/sprite.png?1524701067267');
+    $menu-rdo_sauce_Normal: (108px, 782px, -108px, -782px, 60px, 60px, 980px, 976px, '../../dist/sprite.png', 'menu-rdo_sauce_Normal', '../../dist/sprite.png?1524701067267');
+    $menu-rdo_sauce_Normal_on: (670px, 596px, -670px, -596px, 60px, 60px, 980px, 976px, '../../dist/sprite.png', 'menu-rdo_sauce_Normal_on', '../../dist/sprite.png?1524701067267');
+    $menu-rdo_sauce_XS: (670px, 522px, -670px, -522px, 60px, 60px, 980px, 976px, '../../dist/sprite.png', 'menu-rdo_sauce_XS', '../../dist/sprite.png?1524701067267');
+    $menu-rdo_sauce_XS_on: (882px, 780px, -882px, -780px, 60px, 60px, 980px, 976px, '../../dist/sprite.png', 'menu-rdo_sauce_XS_on', '../../dist/sprite.png?1524701067267');
+    $mypage-coupon_logo: (656px, 450px, -656px, -450px, 70px, 64px, 980px, 976px, '../../dist/sprite.png', 'mypage-coupon_logo', '../../dist/sprite.png?1524701067267');
+    $mypage-icon-mobile: (942px, 732px, -942px, -732px, 30px, 30px, 980px, 976px, '../../dist/sprite.png', 'mypage-icon-mobile', '../../dist/sprite.png?1524701067267');
+    $mypage-icon-pc: (942px, 702px, -942px, -702px, 30px, 30px, 980px, 976px, '../../dist/sprite.png', 'mypage-icon-pc', '../../dist/sprite.png?1524701067267');
+    $mypage-od_info: (480px, 58px, -480px, -58px, 80px, 110px, 980px, 976px, '../../dist/sprite.png', 'mypage-od_info', '../../dist/sprite.png?1524701067267');
+    $mypage-rvip: (450px, 222px, -450px, -222px, 120px, 114px, 980px, 976px, '../../dist/sprite.png', 'mypage-rvip', '../../dist/sprite.png?1524701067267');
+    $mypage-s_rvip: (0px, 708px, 0px, -708px, 70px, 74px, 980px, 976px, '../../dist/sprite.png', 'mypage-s_rvip', '../../dist/sprite.png?1524701067267');
+    $mypage-s_vip: (600px, 522px, -600px, -522px, 70px, 74px, 980px, 976px, '../../dist/sprite.png', 'mypage-s_vip', '../../dist/sprite.png?1524701067267');
+    $mypage-s_vvip: (600px, 596px, -600px, -596px, 70px, 74px, 980px, 976px, '../../dist/sprite.png', 'mypage-s_vvip', '../../dist/sprite.png?1524701067267');
+    $mypage-vip: (732px, 406px, -732px, -406px, 120px, 114px, 980px, 976px, '../../dist/sprite.png', 'mypage-vip', '../../dist/sprite.png?1524701067267');
+    $mypage-vvip: (732px, 520px, -732px, -520px, 120px, 114px, 980px, 976px, '../../dist/sprite.png', 'mypage-vvip', '../../dist/sprite.png?1524701067267');
+    $order-bg_oneclick_box: (480px, 168px, -480px, -168px, 92px, 40px, 980px, 976px, '../../dist/sprite.png', 'order-bg_oneclick_box', '../../dist/sprite.png?1524701067267');
+    $order-btn-delete: (964px, 630px, -964px, -630px, 16px, 16px, 980px, 976px, '../../dist/sprite.png', 'order-btn-delete', '../../dist/sprite.png?1524701067267');
+    $order-icon_delivery: (150px, 222px, -150px, -222px, 150px, 150px, 980px, 976px, '../../dist/sprite.png', 'order-icon_delivery', '../../dist/sprite.png?1524701067267');
+    $order-icon_delivery_on: (0px, 222px, 0px, -222px, 150px, 150px, 980px, 976px, '../../dist/sprite.png', 'order-icon_delivery_on', '../../dist/sprite.png?1524701067267');
+    $order-icon_orderok: (450px, 372px, -450px, -372px, 80px, 100px, 980px, 976px, '../../dist/sprite.png', 'order-icon_orderok', '../../dist/sprite.png?1524701067267');
+    $order-icon_packaging: (0px, 522px, 0px, -522px, 150px, 150px, 980px, 976px, '../../dist/sprite.png', 'order-icon_packaging', '../../dist/sprite.png?1524701067267');
+    $order-icon_packaging_on: (450px, 522px, -450px, -522px, 150px, 150px, 980px, 976px, '../../dist/sprite.png', 'order-icon_packaging_on', '../../dist/sprite.png?1524701067267');
+    $papajohns-bullet_history: (862px, 328px, -862px, -328px, 18px, 18px, 980px, 976px, '../../dist/sprite.png', 'papajohns-bullet_history', '../../dist/sprite.png?1524701067267');
+  $spritesheet-sprites: ($common-btnTop, $common-btn_close, $common-btn_close2, $common-btn_datepicker, $common-btn_history_prev, $common-btn_monthNext, $common-btn_monthPrev, $common-btn_reset, $common-btn_reset_m, $common-btn_toggle, $common-btn_toggle_white, $common-foot_blog, $common-foot_facebook, $common-foot_insta, $common-foot_link, $common-foot_link_m, $common-foot_twitter, $common-gnb_cart, $common-gnb_cart_on, $common-gnb_click, $common-gnb_click_on, $common-gnb_login, $common-gnb_login_on, $common-gnb_m_customer, $common-gnb_m_franchise, $common-gnb_m_menu, $common-gnb_m_off, $common-gnb_m_on, $common-gnb_m_papajohns, $common-gnb_m_promotion, $common-gnb_m_store, $common-gnb_mypage, $common-gnb_mypage_on, $common-gnb_online, $common-gnb_online_on, $common-ic_arrow, $common-ic_equal, $common-ic_half_left, $common-ic_half_left_m, $common-ic_half_right, $common-ic_half_right_m, $common-ic_plus, $common-icon_arr, $common-logo, $common-logo_m, $common-paging_first, $common-paging_first_on, $common-paging_last, $common-paging_last_on, $common-paging_next, $common-paging_next_on, $common-paging_prev, $common-paging_prev_on, $common-pop_close, $common-quick_click, $common-quick_membership, $common-quick_sale, $common-sel_list, $common-spinner_minus, $common-spinner_minus_m, $common-spinner_plus, $common-spinner_plus_m, $common-swiper_left, $common-swiper_right, $cscenter-ico_delivery, $cscenter-ico_packaging, $cscenter-ico_restaurant, $member-icon_ipin, $member-icon_mobile, $member-join_logo, $member-membership_level_bg, $member-membership_level_rvip, $member-membership_level_vip, $member-membership_level_vvip, $member-membership_pizza1, $member-membership_pizza10, $member-membership_pizza2, $member-membership_pizza3, $member-membership_pizza4, $member-membership_pizza5, $member-membership_pizza6, $member-membership_pizza7, $member-membership_pizza8, $member-membership_pizza9, $member-membership_pizza_bg, $member-pizza_03, $menu-rdo_bake_Normal, $menu-rdo_bake_Normal_on, $menu-rdo_bake_WD, $menu-rdo_bake_WD_on, $menu-rdo_cheese_LC, $menu-rdo_cheese_LC_on, $menu-rdo_cheese_NC, $menu-rdo_cheese_NC_on, $menu-rdo_cheese_Normal, $menu-rdo_cheese_Normal_on, $menu-rdo_cut_10, $menu-rdo_cut_10_on, $menu-rdo_cut_6, $menu-rdo_cut_6_on, $menu-rdo_cut_8, $menu-rdo_cut_8_on, $menu-rdo_cut_Normal, $menu-rdo_cut_Normal_on, $menu-rdo_cut_Square, $menu-rdo_cut_Square_on, $menu-rdo_sauce_LS, $menu-rdo_sauce_LS_on, $menu-rdo_sauce_NS, $menu-rdo_sauce_NS_on, $menu-rdo_sauce_Normal, $menu-rdo_sauce_Normal_on, $menu-rdo_sauce_XS, $menu-rdo_sauce_XS_on, $mypage-coupon_logo, $mypage-icon-mobile, $mypage-icon-pc, $mypage-od_info, $mypage-rvip, $mypage-s_rvip, $mypage-s_vip, $mypage-s_vvip, $mypage-vip, $mypage-vvip, $order-bg_oneclick_box, $order-btn-delete, $order-icon_delivery, $order-icon_delivery_on, $order-icon_orderok, $order-icon_packaging, $order-icon_packaging_on, $papajohns-bullet_history, );
+  $spritesheet: (980px, 976px, '../../dist/sprite.png', $spritesheet-sprites, );
+
+// The provided mixins are intended to be used with the array-like variables
+//
+// .icon-home {
+//   @include sprite-width($icon-home);
+// }
+//
+// .icon-email {
+//   @include sprite($icon-email);
+// }
+//
+// Example usage in HTML:
+//
+// `display: block` sprite:
+// <div class="icon-home"></div>
+//
+// To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+//
+// // CSS
+// .icon {
+//   display: inline-block;
+// }
+//
+// // HTML
+// <i class="icon icon-home"></i>
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(#{$sprite-image});
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+// The `sprites` mixin generates identical output to the CSS template
+//   but can be overridden inside of SCSS
+//
+// @include sprites($spritesheet-sprites);
+@mixin sprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
+}
+
+@mixin getImage($sprite) {
+  $sprite-image: nth($sprite, 11);
+  background-image: url(#{$sprite-image});
+  background-repeat: no-repeat;
+}
+
+@mixin getWidthHeight($sprite) {
+  width: nth($sprite, 5);
+  height: nth($sprite, 6);
+}
+@mixin getWidthHeightRetina($sprite) {
+  width: nth($sprite, 5) /2;
+  height: nth($sprite, 6) /2;
+}
+
+@mixin getPosition($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+@mixin getPositionRetina($sprite) {
+  $sprite-offset-x: nth($sprite, 3)/2;
+  $sprite-offset-y: nth($sprite, 4)/2;
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin getBackgroundSize(){
+  $sprite-width: nth($spritesheet, 1);
+  $sprite-height: nth($spritesheet, 2);
+  -webkit-background-size: $sprite-width $sprite-height;
+  background-size: $sprite-width $sprite-height;
+}
+@mixin getBackgroundSizeRetina(){
+  $sprite-width: nth($spritesheet, 1)/2;
+  $sprite-height: nth($spritesheet, 2)/2;
+  -webkit-background-size: $sprite-width $sprite-height;
+  background-size: $sprite-width $sprite-height;
+}
+
+@mixin getSprite($sprite){
+  @include getImage($sprite);
+  @include getBackgroundSize();
+  @include getPosition($sprite);
+  @include getWidthHeight($sprite);
+  font-size:0;
+  color:transparent;
+}
+@mixin getSpriteRetina($sprite){
+  @include getImage($sprite);
+  @include getWidthHeightRetina($sprite);
+  @include getPositionRetina($sprite);
+  @include getBackgroundSizeRetina();
+  font-size:0;
+  color:transparent;
+}

@@ -1,0 +1,341 @@
+@charset "UTF-8";
+
+/* input, select, textarea*/
+.input, .textarea, .select{
+    display:inline-block;height:40px;line-height:38px;padding:0px 10px;border:1px solid #ddd;background:#fff;transition-duration:.1s;vertical-align:middle;box-sizing:border-box;
+    @include respond-to('ly-m'){
+        height: 30px;line-height: 28px;padding: 0 5px;
+    }    
+    &:hover,
+    &:focus{
+        border-color:#777
+    }
+    &:disabled{
+        background-color:#f3f3f3;
+    }
+    &.h20{
+        padding: 0 5px;height: 20px;line-height: 18px;font-size: 11px;
+        @include respond-to('ly-m'){		
+			padding:0px 3px;height: 15px;lline-height: 13px;font-size: 10px;
+		}
+    }
+    &.h30{        
+        height: 30px;line-height: 28px;font-size: 13px;
+        @include respond-to('ly-m'){
+			padding:0px 5px;height: 20px;line-height: 18px;font-size: 11px;
+		}
+    }
+    &.h50{        
+        padding: 0 20px;height: 50px;line-height: 48px;font-size:18px;
+        @include respond-to('ly-m'){
+			padding:0px 15px;height: 35px;line-height: 33px;font-size: 14px;
+		}
+    }
+    &.readonly{background:#f9f9f9 !important;}
+    &.error{background:#f9ecec !important;}
+}
+.input[type="file"]{
+    padding:3px;line-height:26px;
+    @include respond-to('ly-m'){
+        line-height:16px;
+    }
+}
+.textarea{
+    width:100%;min-height:100px;height: auto;padding:1em;resize:none;font-size: 0.875em;line-height:1.5;
+}
+.select{
+    padding-right:0px !important;
+}
+
+/* checkbox, radio */
+.checkbox, 
+.radio{
+    position:relative;display:inline-block;cursor:pointer;vertical-align:middle;
+    input{
+        position:absolute;left:0;top:0;width:30px;height:30px;z-index:1;opacity:0;
+        @include respond-to('ly-m'){
+            width:20px;height:20px;
+        }        
+        + .lbl{
+            position:relative;display:inline-block;margin:0;line-height:22px;padding:4px 0 4px 35px;font-weight:normal;vertical-align:top;word-break:break-all;
+            @include respond-to('ly-m'){
+                padding:1px 0 1px 25px;line-height:18px;
+            }
+            &:before{
+                content:'';display:inline-block;width:30px;height:30px;position:absolute;left:0;top:0;background:#fff;border:2px solid #ccc;border-radius:50%;box-shadow:0 1px 2px rgba(0, 0, 0, 0.1);box-sizing:border-box;transition:border 0.3s;
+                @include respond-to('ly-m'){
+                    width:20px;height:20px;border-width: 1px;
+                }
+            }
+            &:after{
+                content:'';display:inline-block;position:absolute;transition:border 0.3s;
+            }
+        }
+        
+        &:checked,
+        &:focus{outline:none;}
+        &:hover + .lbl,
+        &:focus + .lbl{
+            &:before{border-color:#bbb;}
+            &:after{border-color:#bbb;}
+        }
+        &:disabled + .lbl{            
+            &:before{background: #f3f3f3;}
+        }
+        &:checked + .lbl{
+            color:#222;
+            &:before{border-color: #09997a;}
+            &:after{border-color: #09997a;}
+        }
+    }    
+    &.only input + .lbl{
+        padding-left:30px;text-indent:-999em;font-size:0;
+        @include respond-to('ly-m'){
+            padding-left:20px;
+        }
+    }    
+}
+.checkbox input + .lbl:after{
+    width:12px;height:6px;top:8px;left:7px;border:4px solid #ccc;border-top:none;border-right:none;transform:rotate(-45deg);
+    @include respond-to('ly-m'){
+        width:8px;height:4px;top:5px;left:5px;border-width:2px;
+    }
+}
+.radio input + .lbl:after{
+    left: 0;top: 0;width: 18px;height: 18px;border: 6px solid #ddd;border-radius:100%;
+    @include respond-to('ly-m'){
+        width:12px;height:12px;border-width:4px;
+    }
+}
+
+/* readonly, error, placeholder */
+::-webkit-input-placeholder,
+::-moz-placeholder,
+::-ms-input-placeholde,
+:-ms-input-placeholder,
+.placeholder{
+    color:#999;opacity:1;
+}
+
+
+/*파일첨부*/
+.inp_file{
+    position:relative;padding-right:105px;
+    @include respond-to('ly-m') {
+        padding-right: 65px;
+    }
+    > input{
+        width:100%;vertical-align:middle;
+    }
+    .btn_file{
+        display:inline-block;position:absolute;right:0;top:0;overflow:hidden;vertical-align:middle;
+        .button{
+            width:100px;padding-left:0;padding-right:0;
+            @include respond-to('ly-m') {
+                width: 60px;
+            }
+        }
+        input{
+            position:absolute;left:0;top:0;width:100%;height:100%;padding:0;margin:0;font-size:10em;line-height:2;cursor:pointer;opacity:0;z-index:2;
+        }
+    }
+}
+span.inp_file{
+    display:inline-block;padding-right:0;
+    > input{
+        width:400px;
+        @include respond-to('ly-m') {
+			width: 200px;
+		}
+    }
+    .btn_file{
+        position:relative;
+    }
+}
+
+/*spinner*/
+.ui-spinner{
+    position:relative;display:inline-block;padding:0 39px;width:120px;height: auto !important;background: #fff;border: 1px solid #cccccc;border-radius: 4px;overflow: hidden;vertical-align: middle;box-sizing:border-box;    
+    @include respond-to('ly-m'){
+        width:90px;padding:0 29px;
+    }
+    .spinner{
+        display:inline-block;width:100%;height: 38px;text-align:center;font-size:1.125em;color:#222;border: 0 none;margin: 0;padding:0;font-weight:bold;vertical-align:top;
+        @include respond-to('ly-m'){
+            height: 28px;
+        }
+    }
+}
+.ui-spinner-button{
+    position:absolute;top:0;width:36px;height:36px;overflow:hidden;
+    .icon{
+        position:absolute;left:-9999em;width:0px;height:0px;font-size:0;line-height:0;text-indent:-9999px;
+    }
+}
+.ui-spinner-up{
+    right:0;border-left: 1px solid #ccc;
+    @include getSprite($common-spinner_plus);
+    @include respond-to('ly-m'){
+        @include getSpriteRetina($common-spinner_plus_m);
+    }
+}
+.ui-spinner-down{
+    left:0;border-right: 1px solid #ccc;
+    @include getSprite($common-spinner_minus);
+    @include respond-to('ly-m'){
+        @include getSpriteRetina($common-spinner_minus_m);
+    }
+}
+
+.inp_spinner{
+    position:relative;display:inline-block;padding:0 39px;width:120px;background: #fff;border: 1px solid #cccccc;border-radius: 4px;overflow: hidden;vertical-align: middle;box-sizing:border-box;
+    @include respond-to('ly-m'){
+        width:90px;padding:0 29px;
+    }
+    span{
+        position: relative;display: block;
+        .input{
+            display:inline-block;width:100%;height: auto;text-align:center;font-size:1.125em;color:#222;border:0;padding:0;font-weight:bold;vertical-align:top;
+        }
+        .select{
+            position: absolute;left: 0;top: 0;width: 100%;height: 100%;opacity: 0;padding: 0;font-size: 0.875em;text-align: center;
+        }
+    }
+    .btn{
+        position:absolute;top:0;width:36px;height:36px;
+        @include respond-to('ly-m'){
+            width: 28px;height: 28px;
+        }        
+        &.btn_minus{
+            left:0;border-right: 1px solid #ccc;
+            @include getSprite($common-spinner_minus);
+            @include respond-to('ly-m'){
+                @include getSpriteRetina($common-spinner_minus_m);
+            }
+        }
+        &.btn_plus{
+            right:0;border-left: 1px solid #ccc;
+            @include getSprite($common-spinner_plus);
+            @include respond-to('ly-m'){
+                @include getSpriteRetina($common-spinner_plus_m);
+            }
+        }
+    }
+}
+/* datepicker */
+.datepicker{
+    width:140px;padding-right: 39px;text-align: center;
+    @include respond-to('ly-m'){
+		width:110px;padding-right: 29px;
+	}
+}
+.ui-datepicker-trigger{
+    display:inline-block;vertical-align:middle;margin-left:-39px;width: 38px;height: 38px;line-height: 38px;text-align: center;font-size: 0;
+    @include respond-to('ly-m'){
+		margin-left:-29px;width: 28px;height: 28px;line-height: 28px;
+	}
+    &:before{
+        content:'';display:inline-block;vertical-align: middle;
+        @include getSprite($common-btn_datepicker);
+        @include respond-to('ly-m'){
+			@include getSpriteRetina($common-btn_datepicker);
+		}
+    }
+}
+
+/* switch */
+.switch{
+    display:inline-block;vertical-align:middle;
+    span{
+        position:relative;width:65px;height:26px;background:#e8e8e8;display:inline-block;border-radius:13px;cursor:pointer;transition:150ms linear;font-size:12px;
+        &:before{
+            content:"off";position:absolute;right:10px;top:5px;color:#999999;text-transform:uppercase;line-height:14px;
+        }
+        &:after{            
+            content:"";display:block;height:22px;width:22px;position:absolute;top:2px;left:2px;border-radius:999px;background:#fff;transition:150ms linear;
+        }
+    }
+    input{
+        position:absolute;left:-9999px;opacity:0;
+        &:checked + span{
+            background:#dd0000;
+            &:before{
+                content:"on";left:12px;color:#fff;
+            }
+            &:after{
+                left:41px;
+            }
+        }
+    }
+}
+
+/* width */
+.inp_wid{    
+    position:relative;    
+    &:after{content:'';display:block;clear:both;}
+    + .inp_wid{margin-top:5px;}
+    >.button{padding-left:0;padding-right:0;}
+    > *{float:left;width:100%;margin-left:2%;}
+    > *:first-child{margin-left:0;}
+    &.wid2>*{width:49%;}
+    &.wid3>*{width:32%;
+        &.col2{width:66%;}
+    }
+    &.wid4>*{width:23.5%;
+        &.col2{width:49%;}
+        &.col3{width:73.5%;}
+    }
+    @include respond-to('ly-m') {
+        + .inp_wid_m{margin-top:5px;}
+    }
+}
+span.inp_wid{display: inline-block;vertical-align: middle;
+    @include respond-to('ly-m'){
+        display: block;
+    }
+}
+
+.inp_wid_m{
+    > *{margin: 0 0.3em;
+        &:first-child{
+            margin-left: 0;
+        }
+        &:last-child{
+            margin-right: 0;
+        }
+    }
+    @include respond-to('ly-m') {
+        display: block;position:relative;
+        &:after{content:'';display:block;clear:both;}
+        + .inp_wid,
+        + .inp_wid_m{margin-top:5px;}
+        >.button{padding-left:0;padding-right:0;}
+        > *{float:left;width:100%;margin:0 0 0 2%;}
+        > *:first-child{margin-left:0;}
+        &.wid2>*{width:49%;}
+        &.wid3>*{width:32%;
+            &.col2{width:66%;}
+        }
+        &.wid4>*{width:23.5%;
+            &.col2{width:49%;}
+            &.col3{width:73.5%;}
+        }
+    }    
+}
+
+.inp_btn{
+	position: relative;
+	@include respond-to('ly-m'){
+		padding-right: 85px;
+	}
+	.input{width: 340px;
+		@include respond-to('ly-m'){
+			width: 100%;
+		}
+	}
+	.button{width: 120px;padding: 0;
+		@include respond-to('ly-m'){
+			width: 80px;position: absolute;right: 0;top: 0;
+		}
+	}
+}

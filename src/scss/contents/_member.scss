@@ -1,0 +1,293 @@
+@charset "UTF-8";
+
+.member{
+    overflow: hidden;
+    img{
+        width: 100%;
+    }
+    .input,
+    .button{vertical-align: top;}
+    > .banner{
+        float: left;width: 46.8%;
+        @include respond-to('ly-m') {
+            float: none;width: auto;
+        }
+    }
+    >.cont{
+        float: right;width: 48.4%;
+        @include respond-to('ly-m') {
+            float: none;width: auto; margin-top: 25px;
+        }
+        .box{
+            padding: 3.125em 2.438em;border: 1px solid #dddddd;
+            @include respond-to('ly-m') {
+                padding: 25px 10px;
+            }
+		}
+		.tabmenu + .box{border-top: 0 none;}
+        ul{
+            position: relative;
+            li{
+                position: relative;
+            }
+            .inp{
+                padding-right: 140px;line-height: 40px;
+                @include respond-to('ly-m') {
+                    padding-right: 90px;line-height: 30px;
+                }
+                +.inp{
+                    margin-top: 10px;
+                }
+                > .input{
+                    width: 100%;
+                }
+                > span{
+                    display: inline-block;line-height: 1.5;
+                }
+            }
+            .chk{
+                margin-top: 20px;overflow: hidden;
+                .link_txt{
+                    float: right;line-height: 30px;font-size: 0.875em;
+                    @include respond-to('ly-m') {
+                        line-height: 20px;
+                    }
+                    a.link{
+                        margin-left: 1.5em;
+                    }
+                }
+            }
+            .btn{
+                position: absolute;top: 0;right: 0;width: 120px;
+                @include respond-to('ly-m') {
+                    width: 80px;
+                }
+                .button{
+                    width: 100%;height: 90px;line-height: 88px;font-size: 1.250em;padding: 0;
+                    @include respond-to('ly-m') {
+                        height: 70px;line-height: 68px;
+                    }
+                }
+            }
+            .btn2{
+                position: absolute;top: 0;right: 0;width: 120px;
+                @include respond-to('ly-m') {
+                    width: 80px;
+                }
+                .button{
+                    width: 100%;padding: 0;
+                }
+            }
+            .social_btn{
+				margin-top: 80px;padding: 0;
+				@include respond-to('ly-m') {
+					margin-top: 25px;
+				}
+            }
+                     
+        }
+        .textarea{
+            font-size: 0.875em;color: #888;height: 170px;
+            @include respond-to('ly-m') {
+                height: 85px;
+            }
+        }
+        .agree{
+            overflow: hidden;line-height: 30px;margin: 0.625em 0 1.875em;
+            @include respond-to('ly-m') {
+                line-height: 25px;
+            }
+            strong{color: #222;}                
+            .checkbox{
+                float: right;
+            }
+        }
+	}
+	.social_btn{
+		overflow: hidden;padding:2.438em;
+		@include respond-to('ly-m') {
+			padding: 20px;
+		}
+		a{
+			display: block;float: left;width: 48%;
+			+ a{margin-left: 4%;}
+		}
+	}
+	.find_box{
+		text-align: center;
+		ul{
+			position: relative;margin-top: 2.5em;
+			&:before{
+				content:'';display: block;width: 1px;height: 100%;position: absolute;left: 50%;top: 0;background: #dddddd;
+			}
+			li{
+				float: left;width: 50%;padding: 0 10px;box-sizing: border-box;
+			}
+		}
+		.icon{
+			display: block;margin: 0 auto;
+			&.mobile{
+				@include getSprite($member-icon_mobile);
+				@include respond-to('ly-m'){
+					@include getSpriteRetina($member-icon_mobile);
+				}
+			}
+			&.ipin{
+				@include getSprite($member-icon_ipin);
+				@include respond-to('ly-m'){
+					@include getSpriteRetina($member-icon_ipin);
+				}
+			}
+			+ .button{
+				margin-top: 1.875em;
+			}
+		}
+		.button{
+			width: 130px;padding: 0;
+			@include respond-to('ly-m'){
+				width: 100%;
+			}
+		}
+	}
+}
+
+.serch_box{
+    padding: 10px;text-align: center;background: #f1f1f1;   
+}
+.join_flow{
+	@include respond-to('ly-m'){
+		width: 100%;
+	}
+	>li{
+		position: relative;float: left;border-bottom: 2px solid #dddddd;padding: 0.625em 35px 0.625em 20px;color: #999999;
+		@include respond-to('ly-m'){
+			padding-left: 0;padding-right: 10px;width: 33.33%;box-sizing: border-box;text-align: center;
+		}
+		&:after{
+			content:'';display: block;width: 20px;height: 20px;border: 1px solid #999999;border-width: 0 1px 1px 0;text-align: right;position: absolute;right: 5px;top: 11px;transform: rotate(-45deg);
+			@include respond-to('ly-m'){
+				width: 10px;height: 10px;right: 3px;top: 12px;
+			}
+		}
+		&.on{
+			color: #000;font-weight: bold;color: #109573;border-color: #109573;
+			&:after{border-color: #109573;}
+		}
+		&:first-child{
+			padding-left: 10px;
+			@include respond-to('ly-m'){
+				padding-left: 0px;
+			}
+		}
+		&:last-child{
+			padding-right: 10px;
+			@include respond-to('ly-m'){
+				padding-right: 0px;
+			}
+			&:after{display: none;}
+		}
+	}
+	
+}
+.order_serch{
+    margin-bottom: 4.5em;
+    @include respond-to('ly-m') {
+        text-align: left;
+    }
+    > span{
+        display:inline-block;
+        padding: 5px 10px;
+        @include respond-to('ly-m') {
+            position: relative;display:block;padding:5px 90px 5px 0px;
+        }
+        > .input{
+            width: 200px;
+            @include respond-to('ly-m') {
+                width: 100%;
+            }
+        }
+    }
+    .inp_wid{
+        width: 300px;margin: 0 20px;
+        @include respond-to('ly-m') {
+            width: 100%;margin: 0;
+        } 
+    }
+    .button{
+        width: 120px;padding: 0;
+        @include respond-to('ly-m') {
+            position: absolute;right: 0;top: 5px;width: 80px;
+        }
+    }
+}
+
+.join_cont{
+	.sec{
+		position: relative;margin-top: 3em;
+		&:first-child{
+			margin-top: 0;
+		}
+		&:after{
+			@include clearFix();
+		}
+		&.last{
+			padding-top: 1em;border-top: 1px solid #ddd;
+		}
+		&.marketing{
+			padding-bottom: 2em;border-bottom: 1px solid #ddd;
+		}
+	}
+	.tit{
+		color: #222;font-size: 1.250em;margin-bottom: 0.5em;
+	}
+	.textarea{
+		font-size: 0.875em;height: 16.429em;
+	}
+	.chk{
+		position: absolute;right: 0;top: 0;
+	}
+	.dot_list{
+		float: left;
+		@include respond-to('ly-m'){
+			float: none;
+		}
+	}
+	.allchk{
+		float: right;font-size: 1.125em;color: #222;
+		@include respond-to('ly-m'){
+			float: none;margin-bottom: 1em;
+		}
+	}
+	.chk_list li{margin-top: 1em;}
+	.complete{
+		border: 1px solid #eee;text-align: center;padding: 6.625em 0;
+		@include respond-to('ly-m'){
+			padding: 2em 1em;
+		}
+		> div{
+			position: relative;display: inline-block;color: #222;font-size: 1.750em;padding:1.4em 0 1.4em 210px;font-weight: bold;
+			@include respond-to('ly-m'){
+				padding: 0;font-size: 16px;
+			}
+			&:before{
+				content: '';display: block;position: absolute;left: 0;top: 50%;transform: translateY(-50%);
+				@include getSprite($member-join_logo);
+				@include respond-to('ly-m'){
+					position: static;margin: 0 auto 15px;transform: translateY(0);
+					@include getSpriteRetina($member-join_logo);
+				}
+			}
+		}
+	}
+}
+
+.inp_address{
+	li{
+		overflow: hidden;
+		& + li{margin-top: 5px;}
+	}	
+	.address_txt .input{
+		float: left;width: 49.5%;
+		+ .input{margin-left: 1%;}
+	}
+}

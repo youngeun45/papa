@@ -1,0 +1,51 @@
+@charset "UTF-8";
+
+.agree_cont{
+	height:50em;overflow-y:scroll;background:#fff;border:1px solid #d0cdc1;padding:1.25em;font-size:14px;
+	@include respond-to('ly-m') {
+		padding:10px;font-size: 12px;overflow:visible;height:auto;
+	}
+	>li{padding-top:1.25em;
+		&:first-child{padding-top:0;}
+		h4{color: #222;}
+		li{
+			padding: 0.15em 0 0.15em 1em;
+		} 
+		ul,ol,p{padding: 0.15em 0;}
+	}
+}
+
+.sitemap{
+	margin: 0 -15px;
+	@include respond-to('ly-l') {
+		margin: 0 -5px;
+	}
+	> li{float: left;width: 20%;padding: 15px;box-sizing:border-box;
+		@include respond-to('ly-l') {
+			padding: 5px;
+		}
+		&:nth-child(5n+1){clear: both;}
+		@include respond-to('ly-m') {
+			width: 33.33%;
+			&:nth-child(5n+1){clear: none;}
+			&:nth-child(3n+1){clear: both;}
+		}
+		@include respond-to('ly-s') {
+			width: 50%;			
+			&:nth-child(3n+1){clear: none;}
+			&:nth-child(odd){clear: both;}
+		}
+		> div{padding: 20px;border: 1px solid #ddd;
+			@include respond-to('ly-l') {
+				padding: 10px;
+			}
+			h4{
+				margin-bottom: 0.5em;font-size: 1.5em;
+				a{color: #ad0f14;}
+			}
+			ul{
+				li{padding: 0.25em;}
+			}
+		}
+	}
+}

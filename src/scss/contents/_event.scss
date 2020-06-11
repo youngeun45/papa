@@ -1,0 +1,140 @@
+@charset 'utf-8';
+
+.img_promotion{
+    text-align: center;
+    img{max-width: 100%;}
+}
+.list_search{
+    position: relative;text-align: center;background:#f1f1f1;padding: 15px 10px;margin-bottom: 3em;
+    @include respond-to('ly-m') {
+        text-align: left;padding:10px 80px 10px 10px;
+        &.store{
+            padding-right: 10px;
+        }
+    }
+    strong{
+        display: inline-block;padding: 0 2em;vertical-align: top;line-height: 40px;color: #222;
+        @include respond-to('ly-xl') {
+            padding: 0;margin-right: 1em;
+        }
+        @include respond-to('ly-m') {
+            display: block;margin-right: 0;line-height: 1.5;margin-bottom: 0.5em;
+        }
+    }
+    .input, .select{
+        vertical-align: top;width: 350px;margin: 0 1em;
+        @include respond-to('ly-xl') {
+            margin: 0;width: 220px;
+        }
+        @include respond-to('ly-m') {
+            width: 100%;
+            + .input{margin-top: 0.5em;}
+        }
+        &.sel2{
+            width: 150px;
+            @include respond-to('ly-m') {
+                width: 50%;
+            }
+        }
+    }
+    .button{
+        vertical-align: top;width: 100px;padding: 0;
+        @include respond-to('ly-m') {
+            position: absolute;right: 10px;bottom: 10px;width: 65px;
+        }
+    }
+}
+.evt_list{
+    margin: 0 -30px;
+    @include respond-to('ly-l') {
+        margin: 0 -15px;
+    }
+    @include respond-to('ly-m') {
+        margin: 0;
+    }
+    img{width: 100%;}
+    >li{
+        float: left;width: 50%;padding:0 30px 40px;box-sizing: border-box;
+        @include respond-to('ly-l') {
+            padding:0 15px 30px;
+        }
+        @include respond-to('ly-m') {
+            float: none;width: auto;padding:0 0 25px;
+        }
+        > a{
+            display: block;
+            > span{
+                display: block;
+            }
+        }
+    }
+    .info{
+        display: block;padding: 1em;background: #f5f5f5;
+        > strong{
+           display: block; color: #222;
+           @include ellipsis();
+        }
+        > span{
+            display: block;font-size: 0.875em;
+        }
+    }
+}
+
+.evt_swiper{
+    position: relative;padding: 1em 115px;width: 780px;margin: 0 auto;
+    @include respond-to('ly-l') {
+        width: auto;padding: 1em 70px;
+    }
+    @include respond-to('ly-m') {
+        width: auto;padding: 1em 0;
+    }
+    img{width: 100%;}
+    .control{
+        > a{
+            display: block;position: absolute;top: 50%;z-index: 1;transform:translateY(-50%);
+            &.btn_prev{
+                left: 0;
+                @include getSprite($common-swiper_left);
+                @include respond-to('ly-m') {
+                    @include getSpriteRetina($common-swiper_left);
+                }
+            }
+            &.btn_next{
+                right: 0;
+                @include getSprite($common-swiper_right);
+                @include respond-to('ly-m') {
+                    @include getSpriteRetina($common-swiper_right);
+                }
+            }
+        }
+    }
+}
+
+.partnership_list{
+    padding: 1.5em 0;
+    img{width: 100%;}
+    > li{
+        padding: 1.5em 0;
+    }
+    dt{
+        float: left;width:23.9%;
+        @include respond-to('ly-s') {
+            float: none;width:50%;
+        }
+    }
+    dd{
+        margin-left: 24%;padding-left: 2em;
+        @include respond-to('ly-s') {
+            margin-left: 0;padding-left: 0;margin-top: 1em;
+        }
+    }
+    h4{color: #222;font-size: 1em;margin-bottom: 1em;}
+}
+.coupon_sel{position: relative;
+    .sel_list{
+        min-width: 160px;position: absolute;right: 0;bottom: 3em;
+        @include respond-to('ly-m') {
+            bottom:1.3em;
+        }
+    }
+}

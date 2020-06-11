@@ -1,0 +1,255 @@
+@charset 'utf-8';
+
+.qualification_cont{
+    .table {
+        th,td{
+            padding: 19px 20px;
+            @include respond-to('ly-m') {
+                padding: 7px 5px;
+            }
+        }
+    }
+    .fran_cond{
+        margin-bottom: 5em;
+        position:relative;
+        .tbl_area{
+            width: 62.5%;
+            @include respond-to('ly-m') {
+                width: 100%;
+            }
+        }
+        .img_area{
+           position:absolute;
+           bottom:0;
+           right:0;
+           width:31.3% ;
+           @include respond-to('ly-m') {
+               right:auto;
+               left:0;
+               top:0;
+               bottom:auto;
+               width: 100%;
+               text-align: center;
+               position: relative;
+               padding-bottom: 2.5em;
+           }
+        }
+    }
+    .fran_cost {
+    }
+    > p {
+        padding: 1.25em;
+    }
+}
+
+/* franchise step */
+.fran_step_list {
+    margin-left:-20px ;
+    margin-right: -20px;;
+    @include respond-to('ly-xl') {
+        margin: 0;
+    }
+    li{
+        float:left;
+        width: 13.2%;
+        padding:0 20px;
+        text-align: center;
+        position:relative;
+        @include respond-to('ly-xl') {
+            width: 33.33%;
+            min-height:300px;
+            padding: 0;
+            &.step01,&.step02,&.step03{
+               margin-bottom: 3.75em;
+            }
+            &.step04,&.step05,&.step06{
+                float:right;
+            }
+            &.step04 {
+                &:before{
+                    top:-50px;
+                    left:50%;
+                    margin-left: -15px;
+                    transform:rotate(90deg);
+                    @include respond-to('ly-m') {
+                        top:-25px;
+                        margin-left: -6.5px;;
+                    }
+
+                }
+            }
+            &.step05,&.step06 {
+                &:before{
+                    left:auto;
+                    right:-5px;
+                    transform:rotate(180deg)
+                }
+            }
+        }
+        @include respond-to('ly-m') {
+            min-height:254px;
+            padding: 0 5px;
+            box-sizing:border-box;
+        }
+        .img_area{
+            @include respond-to('ly-m') {
+                width: 90px;
+                margin: 0 auto;
+            }
+        }
+        h4{
+           font-size: 1.25em;
+           padding: 1em 0;
+           color: #222; 
+           display: table;
+           margin: 0 auto;
+           @include respond-to('ly-m') {
+               min-height:44px;
+           }
+           span {
+               display: table-cell;
+               vertical-align: middle;
+           }
+        }
+        &:first-child{
+            &:before{
+                display: none;
+            }
+        }
+        &:before{
+            content:"";
+            display: block;
+            width:22px;
+            height:42px;
+            position:absolute;
+            top:68px;
+            left:-9px;
+            @include getSprite($common-icon_arr);
+            @include respond-to('ly-m') {
+                @include getSpriteRetina($common-icon_arr);
+                top:35px;left:-4.5px;
+            }
+        }
+    }
+}
+/* consult */
+.consult_cont {
+    h4{
+        margin-bottom: 1.125em;
+    }
+    .call_area {
+        padding-bottom: 5em;
+        h4{
+            span {
+                padding-left:19px ;
+                font-size: 0.666em;
+                color: #666;
+                font-weight: normal;
+                @include respond-to('ly-m') {
+                    display: block;
+                    padding: 0;
+                }
+            }
+        }
+        >p {
+            padding-top: 1.25em;
+        }
+        .table {
+            th{
+                text-align: center;
+            }
+        }
+    }
+    .online_area {
+        .table{
+            @include respond-to('ly-m') {
+               th{
+                width: 70px;
+               } 
+            }
+        }
+        .consult_priv_area{
+            position: relative;
+            margin-bottom: 3.125em;
+            h5{
+                color: #222;
+                font-size: 1.250em;
+                margin-bottom: 0.5em;
+            }
+            .textarea{
+                height: 14.375em;
+            }
+            .chk {
+                position: absolute;
+                top:0;right:0;
+                .radio + .radio{
+                    margin-left:2.5em;
+                    @include respond-to('ly-l') {
+                        margin-left:1em;
+                    }
+                }
+            }
+        }
+        .inp_btn{
+            span{
+                @include respond-to('ly-m') {
+                    position:absolute;
+                    top:6px;
+                    right:0;
+                    width: 80px;
+                    text-align: center;;
+                }
+            }
+        }
+        .consult_inp {
+            @include respond-to('ly-m') {
+                display: block;
+                &+.consult_inp {
+                    margin-top: 5px;
+                }
+            }
+            .input{
+                width:150px ;
+                @include respond-to('ly-l') {
+                    width: 130px;
+                }
+                @include respond-to('ly-m') {
+                    width: 100%;
+                }
+            }
+            span{
+                padding: 0 10px;
+                @include respond-to('ly-l') {
+                    padding: 0 3px;
+                }
+            }
+        }
+        .txt {
+            position:relative;
+            margin-bottom: 1.125em;
+            padding-right: 60px;
+            span{
+                position:absolute;
+                bottom:0;
+                right:0;
+            }
+        }
+        .textarea {
+            height:160px;
+            @include respond-to('ly-m') {
+                height:80px;
+            }
+            
+        }
+    }
+}
+
+/* papa story */
+.tbl_large {
+    td {
+        padding: 19px 20px;
+        @include respond-to('ly-m') {
+            padding: 7px 5px;
+        }
+    }
+}

@@ -1,0 +1,319 @@
+@charset 'utf-8';
+
+/* faq */
+.tabmenu_sml{
+    display:table;width: 100%;position:relative;
+    @include respond-to('ly-l') {
+        position: relative;display: block;border:1px solid #019676;
+    }
+    >li{
+        display: table-cell;
+        @include respond-to('ly-l') {
+            position: relative;display: block;overflow:hidden;height:0;transition: height 0.5s ease;background: #fff;
+        }        
+        > a {
+            display: block;padding: 0.5em 0;font-size: 1.250em;text-align: center;border:1px solid #dddddd;
+            @include respond-to('ly-l') {
+                text-align: left;border-color:#019676;padding: 0.5em;border:0;
+            }
+            &:hover,&:focus,&:active {
+                color: #fff;background: #000;background: #019676;font-weight: bold;border:1px solid #019676;
+                @include respond-to('ly-l') {
+                    color: #019676; background: #fff; border: none;
+                }
+            }
+        }
+        &.on{
+            @include respond-to('ly-l') {
+                height: 50px;
+            }
+            @include respond-to('ly-m') {
+                height: 37px;
+            }
+            a{
+                color: #fff;background: #000;background: #019676;font-weight: bold;
+                @include respond-to('ly-l') {
+                    background: #fff;color: #019676;
+                    &:before{
+                        content:"";display: block;width: 14px; height:14px; border: solid #019676;border-width:4px 4px 0 0;transform:rotate(134deg);transition: 0.5s ease;position:absolute;top:12px;right:16px;
+                    }       
+                }
+                @include respond-to('ly-m') {
+                    &:before{width: 7px; height:7px;border-width:2px 2px 0 0;top:14px;right:14px;}        
+                }
+            }
+        }
+    }
+
+    &.m_tab_open{
+        @include respond-to('ly-l') {
+            padding-top: 50px;
+        }
+        @include respond-to('ly-m') {
+            padding-top: 37px;
+        }
+        >li{
+            height:50px;
+            @include respond-to('ly-m') {
+                height: 37px;
+            }
+            &.on{
+                @include respond-to('ly-l') {
+                    position: absolute;top: 0;left: 0;right: 0;
+                }
+                > a:before{
+                    transform:rotate(-45deg);
+                    top:16px;
+                }
+            }
+        }
+    }
+}
+
+/* qna */
+.qna_cont {
+    .qna_txt {
+        padding-bottom: 3em;
+        strong{
+            color: #222;
+        }
+    }
+    .tit{
+        color: #222;
+        font-size: 1.250em;
+        margin-bottom: 0.5em;
+    }
+    .qna_priv_area{
+        position: relative;
+        margin-bottom: 3.125em;
+        .textarea {
+            height:14.375em;
+        }
+        .chk {
+            position: absolute;
+            top:0;right:0;
+            .radio + .radio{
+                margin-left:2.5em;
+                @include respond-to('ly-l') {
+                    margin-left:1em;
+                }
+            }
+        }
+    }
+    > .table {
+        .inp_wid_m {
+            @include respond-to('ly-l') {
+                >* {
+                    margin: 0em;
+                }
+            }
+            .radio {
+                @include respond-to('ly-l') {
+                   width: 49%;
+                   margin-top: 0.5em;
+                   margin-left: 0;
+                   &:first-child, &:first-child + .radio {
+                     margin: 0em;
+                   }
+                }
+            }
+            .radio + .radio {
+                margin-left: 1.2em;
+                @include respond-to('ly-l') {
+                    margin-left: 0em;
+                }
+            }
+        }
+        .textarea {
+            height:5em;
+        }
+    }
+}
+/* store */
+.store_search {
+    position: relative;
+    text-align: center;
+    background: #f1f1f1;
+    padding: 15px 10px;
+    margin-bottom: 3em;
+    color: #222;
+    @include respond-to('ly-m') {
+        padding: 10px
+    }
+    strong{
+        display: inline-block;
+        padding: 0 2em;
+        vertical-align: top;
+        line-height: 40px; 
+        color: #222;
+        @include respond-to('ly-xl') {
+            padding: 0;margin-right: 1em;
+        }
+        @include respond-to('ly-l') {
+            display: block;
+            margin-right: 0;
+            margin-bottom: 0.5em;
+            text-align: left;
+        }
+        @include respond-to('ly-m') {
+            line-height:1.5;
+        }
+    }
+    >span {
+        @include respond-to('ly-l') {
+            display: block;
+            text-align: left;
+            overflow: hidden;
+            &.src_inp_wrap{
+                .select:first-child {
+                    float:left;
+                }
+                .select:first-child + .select {
+                    float:right;
+                }
+            }
+            &.sch_btn_wrap{
+                padding-right: 120px;
+                margin-top: 10px;
+                position: relative;
+                .button {
+                    position:absolute;
+                    top:0;
+                    right:0;
+                }
+                .input {
+                    width: 100%;
+                }
+            }
+        }
+        @include respond-to('ly-m') {
+            &.sch_btn_wrap{
+                padding-right: 70px;
+                margin-top: 0.5em;
+                .button {
+                    width: 65px;
+                }
+            }
+        }
+    }
+    .input{
+        width:290px;
+        margin: 0 0.5em;
+        @include respond-to('ly-xl') {
+            margin: 0;
+        }
+        @include respond-to('ly-l') {
+            width: 49%;
+        }
+    }
+    .select {
+        vertical-align: top;
+        width: 200px; 
+        margin: 0 0.5em;
+        @include respond-to('ly-xl') {
+            margin: 0;width: 180px;
+        }
+        @include respond-to('ly-l') {
+            width: 49%;
+        }
+    }
+    .button{
+        vertical-align: top;
+        width: 100px;
+        padding: 0;;
+    }
+}
+.find_store_cont {
+    &:after{
+        content:"";
+        display: block;
+        clear:both;
+    }
+    >div{
+        width: 46.9%;
+        @include respond-to('ly-l') {
+            float:none;
+            width: 100%;
+            &+div {
+                margin-top: 3em;
+            }
+        }
+    }
+    .store_list {
+        border-top:1px solid #666666;
+        border-bottom:1px solid #ccc;
+        overflow:auto;
+        height:754px;
+        @include respond-to('ly-m') {
+            height:225px;
+        }
+        li{
+            border-bottom:1px solid #ccc;
+            padding: 1.25em 0.625em;
+            position:relative;
+            overflow: hidden;
+            @include respond-to('ly-m') {
+                padding-right:70px;
+            }
+            img{
+                float:left;
+                width: 170px; 
+                @include respond-to('ly-m') {
+                   //width: 80px;
+                   display: none;
+                }
+            }
+            >div {
+                margin-left: 188px;
+                @include respond-to('ly-m') {
+                   //margin-left: 90px;
+                   margin-left: 0;
+                }
+                p{
+                    padding-bottom: 0.7em;
+                    @include respond-to('ly-m') {
+                        &+p{
+                            padding-bottom: 0;
+                        }
+                    }
+                    strong {
+                        display: inline-block;
+                        color: #222;
+                        margin-right: 1.25em;;
+                    }
+                }
+                .button {
+                    @include respond-to('ly-l') {
+                        position:absolute;
+                        top:50%;right:10px;margin-top:-15px; ;
+                    }
+                }
+            }
+        }
+    }
+    .map {
+        width: 100%;
+        height:360px;
+        background: #ccc;;
+        @include respond-to('ly-m') {
+            height:200px;
+        }
+    }
+   i[class^="ico"] {
+       display: inline-block;
+        width: 30px; 
+        height:30px;
+        vertical-align:middle;
+        margin: 0 2px;
+    }
+    .ico_delivery {
+        @include getSprite($cscenter-ico_delivery);
+    }
+    .ico_packaging {
+        @include getSprite($cscenter-ico_packaging);
+    }
+    .ico_restaurant {
+        @include getSprite($cscenter-ico_restaurant);
+    }
+
+}

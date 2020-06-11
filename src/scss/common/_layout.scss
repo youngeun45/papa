@@ -1,0 +1,683 @@
+@charset "UTF-8";
+
+#wrap{
+	position: relative;min-width:320px;background: #fff;
+}
+.inner{
+	position:relative;width:1280px;margin:0 auto;
+	@include respond-to('ly-xl'){
+		width: auto;
+	}
+}
+#header{
+	position:relative;min-width: 320px;background: #fff;z-index:15;border-top: 1px solid #dbdbdb;
+	//position:absolute;left:0;top:0;right:0;	
+	//&.fixed{
+		//position: fixed;
+	//}
+}
+#logo{
+	position: absolute;left: 0;top: 0;width: 23.43%;height: 150px;border: 1px solid #dbdbdb;border-top: 0 none;text-align: center;background: #fff;box-sizing: border-box;z-index: 1;
+	@include respond-to('ly-xl'){
+		height: 80px;width: 18%;border-bottom: 0 none;
+	}
+	@include respond-to('ly-l') {
+		width: 22%;
+	}
+	@include respond-to('ly-m') {
+		height: 40px;
+	}
+	&:before{
+		content: '';display: inline-block;height: 100%;vertical-align: middle;
+		@include respond-to('ly-l') {
+			display: none;
+		}
+	}
+	a{
+		display:inline-block;vertical-align: middle;
+		@include getSprite($common-logo);
+		@include respond-to('ly-xl'){
+			margin-top: 10px;
+		}
+		@include respond-to('ly-l') {
+			margin-top: 7px;
+			@include getSprite($common-logo_m);
+			vertical-align: top;
+		}
+		@include respond-to('ly-m') {
+			margin-top: 4px;
+			@include getSpriteRetina($common-logo_m);
+		}
+	}
+}
+.head_top{
+	> .inner > ul{
+		margin-left: 23.43%;
+		@include respond-to('ly-xl'){
+			margin-left: 18%;
+		}
+		@include respond-to('ly-l'){
+			margin-left: 22%;
+		}
+		> li{
+			float: left;position: relative;width: 21.5%;box-sizing: border-box;border-right: 1px solid #dbdbdb;
+			&:last-child{
+				width:14%;
+			}				
+			&.on > a,
+			> a:hover{
+				background: #f1f1f1;color: #ad0f14;
+			}					
+			> a{
+				display: block;padding: 3px 0;text-align: center;
+				@include respond-to('ly-m') {
+					padding: 0;line-height: 40px;
+				}				
+				> strong{
+					position: relative;display: inline-block;height: 54px;vertical-align: middle;
+					@include respond-to('ly-m') {
+						height: 27px;
+					}
+					&.gnb_online{
+						@include getSprite($common-gnb_online);
+						@include respond-to('ly-m') {
+							@include getSpriteRetina($common-gnb_online);
+						}
+					}
+					&.gnb_click{
+						@include getSprite($common-gnb_click);
+						@include respond-to('ly-m') {
+							@include getSpriteRetina($common-gnb_click);
+						}
+					}
+					&.gnb_login{
+						@include getSprite($common-gnb_login);
+						@include respond-to('ly-m') {
+							@include getSpriteRetina($common-gnb_login);
+						}
+					}
+					&.gnb_mypage{
+						@include getSprite($common-gnb_mypage);						
+						@include respond-to('ly-m') {
+							@include getSpriteRetina($common-gnb_mypage);
+						}
+					}
+					&.gnb_cart{
+						@include getSprite($common-gnb_cart);
+						@include respond-to('ly-m') {
+							@include getSpriteRetina($common-gnb_cart);
+						}
+						i{
+							display: block;position: absolute;right: -15px;top: -2px;width: 24px;line-height: 24px;text-align: center;color: #fff;background: #df1313;border: 3px solid #fff;border-radius: 50%;text-indent: 0;font-size: 16px;font-style: normal;
+							@include respond-to('ly-m') {
+								right: -7px;top: -1px;width:14px;line-height: 14px;font-size: 10px;border-width: 2px;
+							}
+						}
+					}
+				}
+				> span{
+					display: block;font-size: 14px;line-height: 20px;
+					@include respond-to('ly-m') {
+						display: none;
+					}
+				}				
+			}			
+			> a:hover > strong,
+			&.on > a > strong{
+				&.gnb_online{
+					@include getSprite($common-gnb_online_on);
+					@include respond-to('ly-m') {
+						@include getSpriteRetina($common-gnb_online_on);
+					}
+				}
+				&.gnb_click{
+					@include getSprite($common-gnb_click_on);
+					@include respond-to('ly-m') {
+						@include getSpriteRetina($common-gnb_click_on);
+					}
+				}
+				&.gnb_login{
+					@include getSprite($common-gnb_login_on);
+					@include respond-to('ly-m') {
+						@include getSpriteRetina($common-gnb_login_on);
+					}
+				}
+				&.gnb_mypage{
+					@include getSprite($common-gnb_mypage_on);
+					@include respond-to('ly-m') {
+						@include getSpriteRetina($common-gnb_mypage_on);
+					}
+				}
+				&.gnb_cart{
+					@include getSprite($common-gnb_cart_on);
+					@include respond-to('ly-m') {
+						@include getSpriteRetina($common-gnb_cart_on);
+					}
+
+					i{
+						border-color: #f1f1f1;
+					}
+				}
+			}
+			> ul{
+				display: none;position: absolute;top: 100%;left: 0;right: 0;background: #fff;border: 1px solid #dbdbdb;border-top: 0 none;z-index: 1;
+				@include respond-to('ly-m') {
+					right: -100%;
+				}
+				> li{
+					border-top: 1px solid #dbdbdb;
+					> a{
+						display: block;text-align: center;font-weight: bold;color: #222;padding: 0.813em 0;
+						@include respond-to('ly-m') {
+							font-size: 11px;
+						}
+						@include respond-to('ly-s') {
+							font-size: 10px;
+						}
+						&:hover{
+							color: #ad0f14;
+						}
+					}
+				}
+			}
+		}
+		.btn_gnb{
+			padding: 13px 0;
+			@include respond-to('ly-m') {
+				padding: 0;
+			}
+			strong{
+				width:40px;
+				@include respond-to('ly-m') {
+					width: 20px;
+				}
+				i:before,
+				i:after{
+					content: '';transition-duration: 0.3s, 0.2s, 0.2s;transition-delay: 0.5s, 0s, 0s;
+				}
+				i:before,
+				i:after,
+				i{
+					position: absolute;display: block;left: 0px;top: 25px;width: 100%;height: 4px;background: #000000;border-radius: 1px;
+					@include respond-to('ly-m') {
+						top: 13px;height: 2px;
+					}
+				}
+				i:before{
+					top: -14px;transition-property: top, transform;
+					@include respond-to('ly-m') {
+						top: -7px;
+					}
+				}
+				i:after{
+					top: auto;bottom: -14px;transition-property:bottom, transform;
+					@include respond-to('ly-m') {
+						top: auto;bottom: -7px;
+					}
+				}
+			}
+			.gnb_open &{	
+				background: #f1f1f1;
+				strong{
+					i{background:none !important;transition:background 0s 0.3s}
+					i:before,
+					i:after{transition-delay:0s, 0.3s, 0.3s;background: #ad0f14 !important;}
+					i:before{top:0px;width:100%;transform:rotate(45deg);}
+					i:after{bottom:0px;width:100%;transform:rotate(-45deg);}
+				}
+			}
+		}
+	}
+}
+.gnb_wrap{
+	background: #ad0f14;height:70px;
+	@include respond-to('ly-xl'){
+		height: auto;min-height: 70px;
+	}
+	@include respond-to('ly-m'){
+		min-height: 35px;
+	}
+	#gnb{
+		position: relative;margin-left: 23.43%;
+		@include respond-to('ly-xl'){
+			margin-left: 18%;
+		}
+		@include respond-to('ly-l'){
+			margin-left: 0;
+		}
+		li{
+			display: inline-block;
+			&.mobile > a,
+			&.none > a{
+				display: none;
+			}
+			a{
+				position: relative;display: inline-block;padding: 0 1em;color: #fff;font-weight: bold;line-height: 70px;
+			}
+		}
+		> ul{
+			position: relative;font-size:28px;padding: 0 1em;width:100%;box-sizing: border-box;transition:all 0.3s;
+			@include respond-to('ly-m'){
+				font-size: 14px;padding: 3px 5px;
+			}
+			> li{
+				@include respond-to('ly-m'){
+					> a{
+						line-height: 30px;padding: 0 0.7em;
+					}
+				}
+				> ul{
+					display: none;padding: 0 0.5em;font-size: 20px;
+					@include respond-to('ly-xl'){
+						font-size: 18px;
+					}
+					> li > a{
+						padding: 0 0.5em;
+						> span{
+							position: relative;display: inline-block;line-height: 1.5;
+							&:after{
+								content: '';display: block;height: 1px;margin: 0 -0.3em;
+							}
+						}
+					}
+					> li.active > a{	
+						&:after{
+							content: '';display: block;border-top: 14px solid #ad0f14;border-left: 13px solid transparent;border-right: 13px solid transparent;position: absolute;left: 50%;bottom: -14px;transform: translateX(-50%);
+						}
+						> span{
+							&:after{
+								background: #fff;
+							}
+						}
+					} 
+				}
+				&.active > ul{
+					display: block;
+				}
+			}
+		}
+		> h3{
+			position: relative;display: inline-block;font-size: 18px;padding: 0 1.5em;line-height: 70px;color: #fff;
+			@include respond-to('ly-m'){
+				font-size: 12px;line-height: 30px;padding: 3px 15px;
+			}
+			&:after{
+				content: '';display: block;border-top: 14px solid #ad0f14;border-left: 13px solid transparent;border-right: 13px solid transparent;position: absolute;left: 50%;bottom: -14px;transform: translateX(-50%);
+				@include respond-to('ly-m'){
+					display: none;
+				}
+			}
+			span{
+				display: inline-block;line-height: 1.5;border-bottom: 1px solid #fff;
+			}
+		} 
+		.sub &{
+			> ul{
+				padding: 0;
+				> li{
+					display: none;
+					&.active{
+						>a{display: none;}
+						display: block;
+					}
+					@include respond-to('ly-m'){
+						> ul{
+							font-size: 12px;padding: 3px 5px;
+							> li{
+								> a{
+									padding: 0px 0.5em;line-height: 30px;
+								}
+								&.active > a:after{
+									display: none;
+								}
+							}
+						}
+					}
+				}
+			}
+		}		
+	}
+	@include respond-to('ly-l')	{
+		.gnb_open .sub .gnb_wrap #gnb{
+			border-top: 0 none;
+			>ul{
+				padding-top:0;
+			}
+		}
+	}
+}
+
+.gnb_open {	
+	.gnb_wrap #gnb{
+		z-index: 2;
+		@include respond-to('ly-l') {
+			position: fixed;top: 80px;left: 0;bottom: 0;right: 0;margin: 0;border-top: 1px solid #dbdbdb;overflow: auto;background: rgba(255,255,255,0.7);
+		}
+		@include respond-to('ly-m') {
+			top: 40px;
+		}
+		> ul{
+			display: block;position: absolute;top:0;left: -1px;right: 0;padding: 25px 30px;border: 1px solid #dbdbdb;background: #fff;font-size: 24px;
+			@include respond-to('ly-l') {
+				padding:15px 0 0;border: 0 none;font-size: 16px;background: #fff;left: 0;
+			}
+			@include respond-to('ly-m') {
+				padding-top: 7px;
+			}
+			> li{
+				display: block !important;float: left;width: 25%;min-height:200px;
+				@include respond-to('ly-l') {
+					display: block;float: none;width: auto;min-height:0;border-bottom: 1px solid #dbdbdb;
+				}
+				&.mobile > a{
+					display: block;
+				}
+				&.none{
+					display: none !important;
+				}
+				> a{
+					display: block !important;color: #ad0f14;line-height: 1;padding: 0;
+					@include respond-to('ly-l') {
+						line-height: 50px;padding-left: 65px;
+						&:before{
+							content: '';display: block;position: absolute;left:15px;top:50%;transform: translateY(-50%);
+						}
+						&:after{
+							content: '';display: block;position: absolute;right:10px;top:50%;transform: translateY(-50%);
+							@include getSpriteRetina($common-gnb_m_off);
+						}
+					}		
+				}
+				@include respond-to('ly-l') {
+					&.active a{
+						display: block;
+					}
+					&.menu a:before{
+						@include getSpriteRetina($common-gnb_m_menu);
+					}
+					&.promotion a:before{
+						@include getSpriteRetina($common-gnb_m_promotion);
+					}
+					&.store a:before{
+						@include getSpriteRetina($common-gnb_m_store);
+					}
+					&.customer a:before{
+						@include getSpriteRetina($common-gnb_m_customer);
+					}
+					&.papajohns a:before{
+						@include getSpriteRetina($common-gnb_m_papajohns);
+					}
+					&.franchise a:before{
+						@include getSpriteRetina($common-gnb_m_franchise);
+					}
+					&.on a:after{
+						@include getSpriteRetina($common-gnb_m_on);
+					}
+				}
+				> ul{
+					display: block;padding: 0;font-size: 16px;padding-top: 5px;
+					@include respond-to('ly-l') {
+						display: none;font-size: 13px;padding:0 10px 10px;
+					}
+					> li{
+						display: block;margin-top: 15px;
+						@include respond-to('ly-l')	{
+							float: left;width: 50%;margin-top: 0px;
+						}
+						> a{
+							display: block;padding: 0;color: #666666;line-height: 1.5;font-weight: normal;
+							@include respond-to('ly-l')	{
+								padding: 10px;line-height: 1;	
+								&.active > a:after{
+									display: none;
+								}
+							}
+						}
+						&.active > a:after{
+							display: none;
+						}
+					}
+				}
+			}
+		}
+		> h3{
+			display: none;
+		}
+	}
+}
+.quickmenu{
+	position: fixed;top: 50%;right: 0;width: 80px;border-top: 10px solid #ad0f14;background: #f1f1f1;text-align: center;font-size: 14px;transform: translateY(-50%);
+	@include respond-to('ly-xl'){
+		display: none;
+	}
+	> ul{
+		padding:0 10px;
+		> li{
+			border-top: 1px solid #666666;
+			&:first-child{
+				border-top: 0 none;
+			}
+			> a{
+				display: block;padding: 9px 0;
+				> i{
+					position: relative;display: block;height: 50px;margin: 3px auto 0;font-style: normal;
+					&.membership{
+						@include getSprite($common-quick_membership);
+						strong{
+							display: block;position: absolute;left: 0;right: 0;bottom: 4px;font-size: 14px;color: #ff3333;
+						}
+					}
+					&.click{
+						@include getSprite($common-quick_click);
+					}
+					&.sale{
+						@include getSprite($common-quick_sale);
+					}
+				}
+			}
+		}
+	}
+	
+	.btn_top{
+		position: relative;display: block;border: 40px solid transparent;border-top: 0 none;border-bottom:40px solid #ad0f14;cursor: pointer;margin-top: 5px;
+		> span{
+			position:absolute;left: -40px;right: -40px;color: #fff;bottom: -35px;line-height: 20px;
+		}
+	}
+}
+
+#container{clear:both;}
+
+#contents{
+	padding-top: 3em;padding-bottom: 5em;
+	@include respond-to('ly-xl'){
+		padding-left: 10px;padding-right: 10px;
+	}
+	@include respond-to('ly-m') {
+		padding-top: 2em;
+	}
+}
+
+.page_top{
+	position:relative;padding-bottom: 3em;
+	@include respond-to('ly-m') {
+		padding-bottom: 1.5em;
+	}
+	&:after{
+		@include clearFix();
+	}
+	h3{
+		display: inline;font-size: 28px;color: #ad0f14;
+		@include respond-to('ly-m') {
+			font-size: 16px;
+		}
+	}
+	.sub{
+		text-align: right;font-size: 0.875em;
+		@include respond-to('ly-m') {
+			text-align: justify;
+		}
+	}
+	.join_flow{
+		float: right;
+		@include respond-to('ly-m'){
+			float: none;
+		}
+	}	
+}
+
+#footer{
+	padding: 20px 0 30px;background: #ad0f14;font-size: 13px;color: #ff9c9f;
+	@include respond-to('ly-xl'){
+		padding-left: 10px;padding-right: 10px;
+	}
+	@include respond-to('ly-m') {
+		padding: 10px;font-size: 10px
+	}
+}
+.foot_sns{
+	@include respond-to('ly-m') {
+		text-align: center;
+	}
+	li{
+		display: inline-block;margin-right: 7px;
+		@include respond-to('ly-m') {
+			margin:0 3px;
+		}
+		a{
+			display: inline-block;padding: 9px;background: #890b0f;border-radius: 50%;vertical-align:top;
+			@include respond-to('ly-m') {
+				padding:7px;
+			}
+			span{
+				display: block;width: 22px;height: 22px;font-size: 0;color: transparent;transition: all 0.3s;
+				@include respond-to('ly-m') {
+					width: 1px;height: 11px;
+				}
+			}
+			&:hover span{
+				transform: scale(1.2);
+			}
+		}
+		&.facebook span{
+			@include getSprite($common-foot_facebook);
+			@include respond-to('ly-m') {
+				@include getSpriteRetina($common-foot_facebook);
+			}
+		}
+		&.twitter span{
+			@include getSprite($common-foot_twitter);
+			@include respond-to('ly-m') {
+				@include getSpriteRetina($common-foot_twitter);
+			}
+		}
+		&.insta span{
+			@include getSprite($common-foot_insta);
+			@include respond-to('ly-m') {
+				@include getSpriteRetina($common-foot_insta);
+			}
+		}
+		&.blog span{
+			@include getSprite($common-foot_blog);
+			@include respond-to('ly-m') {
+				@include getSpriteRetina($common-foot_blog);
+			}
+		}
+	}
+}
+.foot_menu{
+	margin-top:1em;padding-right: 340px;
+	@include respond-to('ly-m') {
+		padding-right: 0;text-align:center;
+	}
+	li{
+		position: relative;display:inline-block;padding:0 1em;
+		a{
+			display:inline-block;color:#fff;vertical-align:top;font-weight:bold;font-size: 14px;
+			@include respond-to('ly-m') {
+				font-size: 10px;
+			}
+		}
+		+ li:before{
+			content: '';display: block;position: absolute;left: 0;top: 25%;height: 50%;width: 1px;background: #fd6f74;
+		}
+		&:first-child{
+			padding-left: 0;
+		}
+	}
+}
+	
+.foot_info{
+	margin-top: 1em;padding-right: 340px;
+	@include respond-to('ly-m') {
+		padding-right: 0;text-align: center;
+	}
+	ul{
+		margin-bottom: 0.3em;
+		li{
+			display:inline-block;margin-right:0.5em;vertical-align: top;
+			@include respond-to('ly-m') {
+				margin: 0 0.2em;
+			}
+			&:first-child{
+				padding-left:0;
+			}
+		}
+	}
+}
+.foot_etc{
+	position: absolute;right: 0;top: 0;
+	@include respond-to('ly-m') {
+		position: static;margin-top: 1em;
+	}
+}
+.foot_link{
+	text-align: center;	
+	a{
+		display:inline-block;
+		@include getSprite($common-foot_link);
+		@include respond-to('ly-m') {
+			@include getSpriteRetina($common-foot_link_m);
+		}
+	}
+}
+.foot_call{
+	margin-top: 1.5em;
+	@include respond-to('ly-m') {
+		width: 290px;margin: 1em auto 0;
+	}
+	li{
+		float: left;width: 33.33%;text-align: center;font-size: 14px;color: #fff;
+		@include respond-to('ly-m') {
+			font-size: 10px;
+		}
+	}
+}
+
+/* skip_Navi */
+#skipNavi{
+	position:relative;
+	a{
+		display:block;position:absolute;left:0;top:-5em;width:15em;text-align:center;color:#fff;background:#000;z-index:200;
+		&:focus, &:hover{top:0px;}
+	}
+}
+
+/* toTop */
+#btnTop{
+	display:none;position:fixed;right:10px;bottom:10px;width:60px;height:60px;font-size:0;text-indent:-1000px;text-align:center;color:#fff;background:#fede5d;opacity:0.7;border-radius:50%;z-index: -1;
+	@include respond-to('ly-xl'){
+		z-index: 1;
+	}
+	@include respond-to('ly-m'){
+		width: 40px;height: 40px;
+	}
+	&:before{
+		content: '';display: block;position: absolute;left: 50%;top: 50%;transform: translate(-50%,-50%);
+		@include getSprite($common-btnTop);
+		@include respond-to('ly-m'){
+			@include getSpriteRetina($common-btnTop);
+		}
+	}
+	&:hover, &:focus{opacity:1;}
+}

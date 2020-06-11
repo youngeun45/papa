@@ -1,0 +1,72 @@
+{
+  // Default options
+  'functions': true,
+}
+
+{{#extend "scss"}}
+{{#content "sprites"}}
+  {{#each sprites}}
+    ${{strings.name}}: ({{px.x}}, {{px.y}}, {{px.offset_x}}, {{px.offset_y}}, {{px.width}}, {{px.height}}, {{px.total_width}}, {{px.total_height}}, '{{{escaped_image}}}', '{{name}}', '{{force_cached_image}}');
+  {{/each}}
+{{/content}}
+{{#content "spritesheet"}}
+  ${{spritesheet_info.strings.name_sprites}}: ({{#each sprites}}${{strings.name}}, {{/each}});
+  ${{spritesheet_info.strings.name}}: ({{spritesheet.px.width}}, {{spritesheet.px.height}}, '{{{spritesheet.escaped_image}}}', ${{spritesheet_info.strings.name_sprites}}, );
+{{/content}}
+{{/extend}}
+
+@mixin getImage($sprite) {
+  $sprite-image: nth($sprite, 11);
+  background-image: url(#{$sprite-image});
+  background-repeat: no-repeat;
+}
+
+@mixin getWidthHeight($sprite) {
+  width: nth($sprite, 5);
+  height: nth($sprite, 6);
+}
+@mixin getWidthHeightRetina($sprite) {
+  width: nth($sprite, 5) /2;
+  height: nth($sprite, 6) /2;
+}
+
+@mixin getPosition($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+@mixin getPositionRetina($sprite) {
+  $sprite-offset-x: nth($sprite, 3)/2;
+  $sprite-offset-y: nth($sprite, 4)/2;
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin getBackgroundSize(){
+  $sprite-width: nth($spritesheet, 1);
+  $sprite-height: nth($spritesheet, 2);
+  -webkit-background-size: $sprite-width $sprite-height;
+  background-size: $sprite-width $sprite-height;
+}
+@mixin getBackgroundSizeRetina(){
+  $sprite-width: nth($spritesheet, 1)/2;
+  $sprite-height: nth($spritesheet, 2)/2;
+  -webkit-background-size: $sprite-width $sprite-height;
+  background-size: $sprite-width $sprite-height;
+}
+
+@mixin getSprite($sprite){
+  @include getImage($sprite);
+  @include getBackgroundSize();
+  @include getPosition($sprite);
+  @include getWidthHeight($sprite);
+  font-size:0;
+  color:transparent;
+}
+@mixin getSpriteRetina($sprite){
+  @include getImage($sprite);
+  @include getWidthHeightRetina($sprite);
+  @include getPositionRetina($sprite);
+  @include getBackgroundSizeRetina();
+  font-size:0;
+  color:transparent;
+}

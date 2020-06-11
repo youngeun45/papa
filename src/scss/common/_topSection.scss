@@ -1,0 +1,342 @@
+@charset "UTF-8";
+
+.top_section{
+	display: none;
+	background: #f1f1f1;
+	padding: 10px 0 30px;
+	@include respond-to('ly-xl'){
+		padding: 10px 10px 30px;
+	}
+	@include respond-to('ly-m'){
+		position: fixed;
+		left: 0;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		padding: 10px;
+		background: rgba(0,0,0,0.7);
+		z-index: 16;
+	}
+	.inner{
+		background: #f1f1f1;
+		@include respond-to('ly-m'){
+			padding: 10px 10px 20px;
+		}
+	}
+	.btn_close{
+		display: block;position: absolute;right: 0;top: 0;line-height: 36px;cursor: pointer;
+		@include respond-to('ly-m'){
+			right: 10px;top: 10px;
+		}
+		> span{
+			display: inline-block;
+			vertical-align: top;
+			font-size: 14px;
+			@include respond-to('ly-m'){
+				display: none;
+			}
+		}
+		
+		i{
+			display: inline-block;
+			margin-left: 10px;
+			vertical-align: top;
+			@include getSprite($common-btn_close);
+			@include respond-to('ly-m'){
+				margin-left: 0;
+				@include getSpriteRetina($common-btn_close);
+			}
+		}
+	}
+	.title{
+		color: #222;
+		font-size: 1.25em;
+		line-height: 1.8;
+		@include respond-to('ly-m'){
+			font-size: 14px;
+			line-height: 18px;
+		}
+	}
+
+	.cart_wrap{
+		position: relative;
+		border-top: 1px solid #ccc;
+		padding-right: 18%;
+		margin-top: 15px;
+		@include respond-to('ly-m'){
+			padding-right: 0;
+			margin-top: 5px;
+		}
+		
+		.list{	
+			padding: 10px 0 10px 20px;
+			@include respond-to('ly-m'){
+				padding-left: 0;
+			}
+
+			> li{
+				position: relative;
+				padding-right:55px;
+				margin: 10px 0;
+				@include respond-to('ly-m'){
+					padding-right: 0;
+				}
+
+				.tbl{
+					display: table;
+					width: 100%;
+					
+					> div{
+						display: table-cell;
+						vertical-align: middle;
+						@include respond-to('ly-m'){		
+							vertical-align: top;
+						}
+						&.menu_txt{
+							.tit{
+								color: #222;
+							}
+							.opt{
+								font-size: 14px;
+								@include respond-to('ly-m'){		
+									font-size: 11px;
+								}
+							}
+						}
+						&.price_txt{
+							width: 40%;
+							@include respond-to('ly-m'){
+								width: 30%;
+								text-align: right;
+							}
+							.inp_spinner{
+								float: left;
+								@include respond-to('ly-m'){
+									float: none;
+								}
+							}
+							.price{
+								float: right;
+								line-height: 40px;
+								color: #222;
+								@include respond-to('ly-m'){
+									float: none;
+									line-height: 1.5;
+									font-size: 14px;
+								}
+								strong{
+									margin-right: 5px;
+								}
+							}
+						}
+					}
+					
+				}
+
+				.add_list{
+					li{
+						position: relative;
+						font-size: 13px;
+						line-height: 20px;
+						overflow: hidden;
+						padding: 4px 0;
+						@include respond-to('ly-m'){
+							line-height: 15px;
+							font-size: 11px;
+						}
+
+						&:first-child{
+							margin-top: 5px;
+						}
+						.half_txt{
+							margin-right: 100px;
+						}
+
+						.price_txt{
+							position: absolute;
+							right: 0;
+							top: 6px;
+							@include respond-to('ly-m'){
+								top: 7px;
+							}
+
+							.price{
+								font-size: 14px;
+								@include respond-to('ly-m'){		
+									font-size: 12px;
+								}
+								strong{
+									margin-right: 5px;
+								}
+							}
+						}
+					}
+				}
+
+				.btn_del{
+					position: absolute;
+					right: 0;
+					top: 9px;
+					@include respond-to('ly-m'){
+						position: static;
+						text-align: right;
+					}
+					
+					button,a{
+						display: inline-block;
+						font-size: 14px;
+						color: #ad0f14;
+						border-bottom: 1px solid #ad0f14;
+						@include respond-to('ly-m'){		
+							font-size: 11px;
+						}
+					}
+					
+				}
+			}
+		}
+		.total{
+			.txt{
+				padding: 0px 55px 0 20px;
+				background: #aaaaaa;
+				color: #fff;
+				overflow: hidden;
+				line-height: 40px;
+				@include respond-to('ly-m'){
+					padding: 0 10px;
+					line-height: 30px;
+				}
+
+				h3{
+					float: left;
+					font-size: 1em;
+				}
+				.price{
+					float: right;
+					font-size:1.25em;
+					@include respond-to('ly-m'){
+						font-size: 1em;
+					}
+					strong{
+						margin-right: 5px;
+					}		
+				}
+			}
+			.btn{
+				position: absolute;
+				right: 0;
+				bottom: 0;
+				width: 18%;
+				padding-left: 30px;
+				box-sizing: border-box;
+				@include respond-to('ly-m'){
+					position: static;
+					padding-left: 0;
+					margin-top: 25px;
+					text-align: center;
+					width: auto;
+				}
+				.button{
+					padding: 0;
+					width: 100%;
+					@include respond-to('ly-m'){
+						width: 120px;
+					}
+				}
+			}
+		}
+	}
+
+	.oneclick_wrap{
+		overflow: hidden;
+
+		.list{
+			li{
+				position: relative;
+				float: left;
+				width: 50%;
+				padding: 15px 20px 15px 50px;
+				box-sizing: border-box;
+				overflow: hidden;
+				@include respond-to('ly-m'){
+					float: none;
+					width: auto;
+					padding: 7px 10px 7px 25px;
+				}
+
+				&:nth-child(odd){
+					clear: both;
+				}
+
+				.radio{
+					position: absolute;
+					left: 0;
+					top: 45px;
+					@include respond-to('ly-m'){
+						top: 20px;					
+					}
+				}
+
+				.img{
+					float: left;
+					width: 130px;
+					@include respond-to('ly-m'){
+						width: 70px;
+					}
+					img{
+						max-width: 100%;
+					}
+				}
+				.info{
+					margin-left: 160px;
+					@include respond-to('ly-m'){
+						margin-left: 80px;
+					}
+					.tit{
+						color: #222;
+					}
+					table{
+						width: 100%;
+						font-size: 0.875em;
+						margin-top: 1em;
+						th{
+							color: #222;
+							font-weight: normal;
+							width: 70px;
+							padding: 3px;
+							vertical-align: top;
+							@include respond-to('ly-m'){
+								width: 45px;
+							}
+						}
+						td{
+							padding: 3px;
+						}
+					}
+				}
+			}
+		}
+		.btn{
+			float: right;
+			width: 18%;
+			padding-left: 30px;
+			box-sizing: border-box;
+			margin-top: 10px;
+			@include respond-to('ly-m'){
+				float: none;
+				padding-left: 0;
+				margin-top: 25px;
+				text-align: center;
+				width: auto;
+			}
+			.button{
+				padding: 0;
+				width: 100%;
+				@include respond-to('ly-m'){
+					width: 120px;
+				}
+			}
+		}
+
+	}
+}
