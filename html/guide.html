@@ -385,6 +385,14 @@
                             &nbsp;&nbsp;&nbsp;&nbsp;
                             <strong class="t_blue">data-min</strong>와 <strong class="t_blue">data-max</strong>로 최소값 및 최대값 설정, input에 value가 없으면 최소값 설정됨
                         </div>
+    
+                        <h4>alertTip <span>(확인 버튼 클릭)</span></h4>
+                        <div class="box">
+                            <input class="input" id="userId" type="text" placeholder="아이디를 입력하세요" title="아이디 입력">
+                            <a href="javascript:vold(0)" class="button btn_gray" onclick="alertTip('#userId','아이디를 확인해주세요')">확인</a>
+                            &nbsp;&nbsp;&nbsp;&nbsp;
+                            alertTip 함수 사용. <strong class="t_red">alertTip(타겟ID,삽입내용)</strong> 예)alertTip('#userId','아이디를 확인해주세요') form태그(input, select, textarea) 위주로 사용
+                        </div>
                     </div>
     
                     <h3>탭메뉴</h3>

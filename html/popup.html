@@ -189,68 +189,17 @@
         <!-- contents -->
         <section id="contents">
             <div class="inner">
-                <div class="page_top">
+                <div class="page_top blind">
                     <h3 id="pageTit">팝업확인</h3>
                 </div>
-                <div class="guide">
-                    <h3>팝업호출방법</h3>
-                    <h4>클래스로 이용하는법</h4>
-                    <textarea class="textarea readonly" style="height:200px" readonly>팝업열때
-<a href="#팝업ID" class="button pop_open">버튼</a>
-a태그 클래스에 pop_open 붙이고 href에 팝업 id를 넣으면 팝업호출
-
-팝업닫을때
-<a href="#" class="button btn_gray pop_close">닫기</a>
-열려있는 팝업 안에 어떤 요소든 pop_close 클래스를 붙이고 클릭하면 해당 팝업은 닫힌다</textarea>
-
-                    <h4>함수로로 이용하는법</h4>
-                    <textarea class="textarea readonly" style="height:200px" readonly>팝업열때
-popOpen('#팝업ID', 닫힌 후 포커스가 갈 버튼);
-ex) 버튼 클릭으로 함수 실행 시 popOpen('#popAlert', this);
-클릭이 아닌 그냥 함수만 실행할때 popOpen('#popAlert'); 이렇게 사용가능
-
-팝업닫을때
-popClose('#팝업ID'); //해당 팝업 닫힘
-ex) popClose('#popAlert');</textarea>
-
-                    <h4>팝업 bg 클릭시 안닫히게 하는법</h4>
-                    <textarea class="textarea readonly" readonly>해당 팝업에 close_none 클래스 부여
-ex) <div id="popAlert" class="pop_bg close_none">...</div></textarea>
-                    <h4>로딩 창</h4>
-                    <textarea class="textarea readonly" readonly>띄우는 함수 : loadingShow();
-닫는 함수 : loadingHide();</textarea>
-                    <p class="mt10">
-                        <button class="button" onclick="loadingShow();">로딩창 띄우기</button>
-                        <button class="button" onclick="loadingHide();" style="z-index:100000;">로딩창 닫기</button>
-                    </p>
-                    <h4>alertTip <span>(확인 버튼 클릭)</span></h4>
-                    <textarea class="textarea readonly" style="height:120px" readonly>폼 관련된 태그 간단한 alert 메세지 용도(focus까지 처리)
-input, select, textarea 위주로 사용
-함수 : alertTip('타겟ID','삽입내용');
-ex)alertTip('#userId','아이디를 확인해주세요')</textarea>
-                    <div class="mt10">
-                        <input class="input" id="userId" type="text" placeholder="아이디를 입력하세요" title="아이디 입력">
-                        <a href="javascript:vold(0)" class="button btn_gray" onclick="alertTip('#userId','아이디를 확인해주세요')">확인</a>
-                    </div>
-                </div>
-                <hr>
-                <h3 class="t_red">코딩 된 팝업확인</h3>
-                <p class="mt10"><a href="#popAlert" class="button pop_open">파파존스 얼럿 팝업</a></p>
-                <p class="mt10"><a href="#popConfirm" class="button pop_open">파파존스 컨펌 팝업</a></p>
-                <p class="mt10"><a href="#popSurveyEnd" class="button pop_open">설문조사 완료 팝업</a></p>
-                <p class="mt10"><a href="#popLoginFail" class="button pop_open">로그인 실패 팝업</a></p>
-                <p class="mt10"><a href="#popLoginEnd" class="button pop_open">로그인 5회 실패 팝업</a></p>
-                <p class="mt10"><a href="#popNonmember" class="button pop_open">로그인 페이지 비회원 주문시 팝업</a></p>
-                <p class="mt10"><a href="#popReceipt" class="button pop_open">영수증 팝업</a></p>
-                <p class="mt10"><a href="#popOneclickSave" class="button pop_open">원클릭주문 등록 팝업</a></p>
-                <p class="mt10"><a href="#popOneclickSetting" class="button pop_open">원클릭주문 설정 팝업</a></p>
-                <p class="mt10"><a href="#popCouponGift" class="button pop_open">쿠폰 선물하기 팝업</a></p>
-                <p class="mt10"><a href="#popAccountConnect" class="button pop_open">계정연동 팝업</a></p>
-                <p class="mt10"><a href="#popMarketing" class="button pop_open">마케팅 활용 동의 안내 팝업</a></p>
-                <p class="mt10"><a href="#popMemberAddress" class="button pop_open">주소찾기(회원) 팝업</a></p>
-                <p class="mt10"><a href="#popOrderAddress" class="button pop_open">주소찾기(주문) 팝업</a></p>
-                <p class="mt10"><a href="#popTodayPizza" class="button pop_open">오늘의 피자추천 팝업</a></p>
-                <p class="mt10"><a href="#popMycoupon" class="button pop_open">보유쿠폰 팝업</a></p>
+                <p><a href="#popOneclickSave" class="pop_open">원클릭주문 등록 팝업</a></p>
+                <p><a href="#popAlert" class="pop_open">파파존스 얼럿 팝업</a></p>
+                <p><a href="#popConfirm" class="pop_open">파파존스 컨펌 팝업</a></p>
+                <p><a href="#popSurveyEnd" class="pop_open">설문조사 완료 팝업</a></p>
+                <p><a href="#popLoginFail" class="pop_open">비밀번호 실패 팝업</a></p>
+                <p><a href="#popLoginEnd" class="pop_open">비밀번호 5회 실패 팝업</a></p>
+                <p><a href="#popNonmember" class="pop_open">로그인 페이지 비회원 주문시 팝업</a></p>
+                <p><a href="#popReceipt" class="pop_open">영수증 팝업</a></p>
             </div>
         </section>
     </div>
@@ -316,7 +265,7 @@ ex)alertTip('#userId','아이디를 확인해주세요')</textarea>
 
 <!-- popup -->
 <!-- 파파존스 얼럿 팝업 -->
-<div id="popAlert" class="pop_bg close_none">
+<div id="popAlert" class="pop_bg">
     <article class="pop_wrap w400">
         <div class="pop_head">
             <h1>파파존스 알림</h1>
@@ -344,8 +293,8 @@ ex)alertTip('#userId','아이디를 확인해주세요')</textarea>
             <div class="t_center">컨펌 메세지를 보여줍니다.</div>
             <br>
             <div class="pop_btn button_wrap btn2">
-                <a href="#" class="button btn_black">확인</a>
                 <a href="#" class="button btn_gray pop_close">취소</a>
+                <a href="#" class="button btn_black">확인</a>
             </div>
         </div>
         <a href="#" class="btn_close pop_close">CLOSE</a>
@@ -363,15 +312,15 @@ ex)alertTip('#userId','아이디를 확인해주세요')</textarea>
             <div class="t_center">설문에 응해주셔서 감사합니다. <br>설문 참여 감사 쿠폰이 발급되었습니다.</div>
             <br>
             <div class="pop_btn button_wrap btn2">
+                <a href="#" class="button btn_black pop_close">확인</a>
                 <a href="#" class="button btn_red">쿠폰 확인</a>
-                <a href="#" class="button btn_gray pop_close">닫기</a>
             </div>
         </div>
         <a href="#" class="btn_close pop_close">CLOSE</a>
     </article>
 </div>
 
-<!-- 로그인 실패 팝업 -->
+<!-- 비밀번호 실패 팝업 -->
 <div id="popLoginFail" class="pop_bg">
     <article class="pop_wrap w400">
         <div class="pop_head">
@@ -385,15 +334,15 @@ ex)alertTip('#userId','아이디를 확인해주세요')</textarea>
                 임시비밀번호 발급 후 이용 가능합니다. 
             </div>
             <div class="pop_btn button_wrap btn2">
-                <a href="#" class="button btn_black">비밀번호 찾기</a>
                 <a href="#" class="button btn_gray pop_close">닫기</a>
+                <a href="#" class="button btn_black">비밀번호 찾기</a>
             </div>
         </div>
         <a href="#" class="btn_close pop_close">CLOSE</a>
     </article>
 </div>
 
-<!-- 로그인 5회 실패 팝업 -->
+<!-- 비밀번호 5회 실패 팝업 -->
 <div id="popLoginEnd" class="pop_bg">
     <article class="pop_wrap w400">
         <div class="pop_head">
@@ -571,375 +520,18 @@ ex)alertTip('#userId','아이디를 확인해주세요')</textarea>
     </article>
 </div>
 
-<!-- 원클릭주문 등록 팝업 -->
+<!-- 원클릭 등록 팝업 -->
 <div id="popOneclickSave" class="pop_bg">
-    <article class="pop_wrap w500">
-        <div class="pop_head">
-            <h1>원클릭주문 등록</h1>
-        </div>
-        <div class="pop_cont">
-            <div class="oneclick_summary">
-                자주 먹는 파파존스 메뉴를 <strong class="t_red">원클릭주문</strong>으로 <br>
-                등록하고 더 빠르게 온라인 주문을 이용해보세요. 
-            </div>
-            <table class="table tbl_left">
-                <caption>원클릭 주문 등록</caption>
-                <colgroup>
-                    <col style="width:20%">
-                    <col>
-                </colgroup>
-                <tbody>
-                    <tr>
-                        <th scope="row">이름</th>
-                        <td><input type="text" class="input w_100" title="이름입력"></td>
-                    </tr>
-                    <tr>
-                        <th scope="row">배달주소</th>
-                        <td>경상북도 울릉군 울릉읍 도동리 1-1</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">메뉴</th>
-                        <td>
-                            <ul class="menu_list3">
-                                <li>슈퍼파파스 오리지널 라지</li>
-                                <li>슈퍼파파스 오리지널 라지</li>
-                                <li>슈퍼파파스 오리지널 라지</li>
-                                <li>슈퍼파파스 오리지널 라지</li>
-                                <li>슈퍼파파스 오리지널 라지</li>
-                                <li>슈퍼파파스 오리지널 라지</li>
-                            </ul>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-            <div class="pop_btn button_wrap btn2">
-                <a href="#" class="button btn_black">등록</a>
-                <a href="#" class="button btn_gray pop_close">취소</a>
-            </div>
-        </div>
-        <a href="#" class="btn_close pop_close">CLOSE</a>
-    </article>
-</div>
-
-<!-- 원클릭주문 설정 팝업 -->
-<div id="popOneclickSetting" class="pop_bg">
     <article class="pop_wrap w400">
         <div class="pop_head">
-            <h1>원클릭주문 설정</h1>
+            <h1>파파존스 알림</h1>
         </div>
         <div class="pop_cont">
-            <p><label class="radio"><input type="radio" name="rdoOneclickSetting"><span class="lbl">로그인 시 원클릭주문 리스트 보기(현재 페이지)</span></label></p>
-            <hr>
-            <p><label class="radio"><input type="radio" name="rdoOneclickSetting"><span class="lbl">로그인과 동시에 결제페이지 이동<br>(기본으로 설정된 원클릭 주문메뉴) </span></label></p>
-            <hr>
-            <p><label class="radio"><input type="radio" name="rdoOneclickSetting"><span class="lbl">로그인 시 홈페이지 메인보기</span></label></p>
-            <div class="pop_btn button_wrap btn2">
-                <a href="#" class="button btn_black">저장</a>
-                <a href="#" class="button btn_gray pop_close">닫기</a>
-            </div>
-        </div>
-        <a href="#" class="btn_close pop_close">CLOSE</a>
-    </article>
-</div>
-
-<!-- 쿠폰 선물하기 팝업 -->
-<div id="popCouponGift" class="pop_bg">
-    <article class="pop_wrap w500">
-        <div class="pop_head">
-            <h1>쿠폰 선물하기</h1>
-        </div>
-        <div class="pop_cont">
-            <div class="pop_coupon_gift">
-                <p>쿠폰을 선물할 아이디를 입력해주세요.</p> 
-                <p>쿠폰을 선물시하면 취소가 불가능합니다. </p>
-                <div class="inp_btn">
-                    <input type="text" class="input" placeholder="아이디" title="아이디입력">
-                    <button class="button btn_black">검색</button>
-                </div>
-                <div class="box"><strong class="t_red">검색된아이디출력</strong></div>
-                <div class="pop_btn button_wrap btn2">
-                    <a href="#" class="button btn_black">확인</a>
-                    <a href="#" class="button btn_gray pop_close">취소</a>
-                </div>
-            </div>
-        </div>
-        <a href="#" class="btn_close pop_close">CLOSE</a>
-    </article>
-</div>
-
-<!-- 계정연동 팝업 -->
-<div id="popAccountConnect" class="pop_bg">
-    <article class="pop_wrap w400">
-        <div class="pop_head">
-            <h1>계정 연동하기</h1>
-        </div>
-        <div class="pop_cont">
-            <table class="table tbl_left">
-                <caption>계정 연동하기</caption>
-                <colgroup>
-                    <col style="width:20%">
-                    <col>
-                </colgroup>
-                <tbody>
-                    <tr>
-                        <th scope="row">아이디</th>
-                        <td><input type="text" class="input w_100" title="아이디입력"></td>
-                    </tr>
-                    <tr>
-                        <th scope="row">비밀번호</th>
-                        <td><input type="password" class="input w_100" title="비밀번호입력"></td>
-                    </tr>
-                </tbody>
-            </table>
-            <div class="pop_btn button_wrap btn2">
-                <a href="#" class="button btn_black">연결하기</a>
-                <a href="#" class="button btn_gray pop_close">취소</a>
-            </div>
-        </div>
-        <a href="#" class="btn_close pop_close">CLOSE</a>
-    </article>
-</div>
-
-<!-- 마케팅 활용 동의 안내 팝업 -->
-<div id="popMarketing" class="pop_bg">
-    <article class="pop_wrap w400">
-        <div class="pop_head">
-            <h1>마케팅 활용 동의 안내 </h1>
-        </div>
-        <div class="pop_cont">
-            <div class="t_center">
-                <p>마케팅 활용 동의(이메일/SMS/주소)를 모두 선택하시는 경우에 한해서만 피자 20% 할인 쿠폰이 증정됩니다. </p>
-                <br>
-                <p>동의하시겠습니까? </p>
-            </div>
-            <div class="pop_btn button_wrap btn2">
-                <a href="#" class="button btn_black">동의하기</a>
-                <a href="#" class="button btn_gray pop_close">그냥 가입하기</a>
-            </div>
-        </div>
-        <a href="#" class="btn_close pop_close">CLOSE</a>
-    </article>
-</div>
-
-<!-- 주소찾기(회원) 팝업 -->
-<div id="popMemberAddress" class="pop_bg">
-    <article class="pop_wrap">
-        <div class="pop_head">
-            <h1>주소찾기</h1>
-        </div>
-        <div id="memberDaumZipcode" class="daum_zipcode"></div> <!-- 다음주소검색 삽입 -->
-        <div class="pop_cont pop_zipcode">            
-            <div class="inp">
-                <input type="text" id="memberAddress1" class="input w_100 readonly" readonly title="기본주소" placeholder="기본주소">
-                <input type="text" id="memberAddress2" class="input w_100 mt5" title="상세주소" placeholder="상세주소">
-            </div>
-            <div class="pop_btn button_wrap btn2">
-                <a href="#" class="button btn_black">확인</a>
-                <a href="#" class="button btn_gray pop_close">취소</a>
-            </div>
-        </div>
-        <a href="#" class="btn_close pop_close">CLOSE</a>
-    </article>
-</div>
-
-<!-- 주소찾기(주문) 팝업 -->
-<div id="popOrderAddress" class="pop_bg">
-    <article class="pop_wrap">
-        <div class="pop_head">
-            <h1>주소찾기</h1>
-        </div>
-        <div id="orderDaumZipcode" class="daum_zipcode"></div> <!-- 다음주소검색 삽입 -->
-        <div class="pop_cont pop_zipcode">
-            <div class="list">
-                <p>해당하는 주소를 선택해 주세요.</p>
-                <ul>
-                    <li><label class="radio"><input type="radio" name="rdoAddress"><span class="lbl">101동</span></label></li>
-                    <li><label class="radio"><input type="radio" name="rdoAddress"><span class="lbl">102동</span></label></li>
-                    <li><label class="radio"><input type="radio" name="rdoAddress"><span class="lbl">103동</span></label></li>
-                    <li><label class="radio"><input type="radio" name="rdoAddress"><span class="lbl">104동</span></label></li>
-                    <li><label class="radio"><input type="radio" name="rdoAddress"><span class="lbl">105동</span></label></li>
-                    <li><label class="radio"><input type="radio" name="rdoAddress"><span class="lbl">106동</span></label></li>
-                    <li><label class="radio"><input type="radio" name="rdoAddress"><span class="lbl">107동</span></label></li>
-                    <li><label class="radio"><input type="radio" name="rdoAddress"><span class="lbl">108동</span></label></li>
-                </ul>
-            </div>
-            <div class="store"><strong class="t_black">배달가능매장</strong> <span>테스트점</span></div>
-            <div class="inp">
-                <input type="text" id="orderAddress1" class="input w_100 readonly" readonly title="기본주소" placeholder="기본주소">
-                <input type="text" id="orderAddress2" class="input w_100 mt5" title="상세주소" placeholder="상세주소">
-            </div>
-
-            <div class="pop_btn button_wrap btn2">
-                <a href="#" class="button btn_green">등록 후 사용</a>
-                <a href="#" class="button btn_black">한번만 사용</a>
-            </div>
-        </div>
-        <a href="#" class="btn_close pop_close">CLOSE</a>
-    </article>
-</div>
-
-<!-- 오늘의 피자추천 팝업 -->
-<div id="popTodayPizza" class="pop_bg">
-    <article class="pop_wrap w400">
-        <div class="pop_head">
-            <h1>오늘의 피자추천!!</h1>
-        </div>
-        <div class="pop_cont">
-            <div class="today_pizza">
-                <h2>슈퍼파파스</h2>
-                <div class="img"><img src="../../dist/images/menu/@menu2.png" alt="메뉴이름"></div>
-                <div class="topping">
-                    <strong class="t_black">기본토핑</strong>
-                    <div>엑스트라치즈, 양송이버섯, 햄, 이탈리안 소시지,  페페로니, 블랙 올리브, 양파, 피망 </div>
-                </div>
-                <div class="txt">파파존스의 대표피자로 고기와 야채가 듬뿍 토핑된 최고의 피자</div>
-                <div class="opt">
-                    <div class="sel_list">
-                        <a href="#">오리지널 <span class="t_green">R</span> <strong class="t_red">18,900</strong></a>
-                        <ul>
-                            <li><a href="#" class="option">오리지널 <span class="t_green">R</span> <strong class="t_red">18,900</strong></a></li>
-                            <li><a href="#" class="option">오리지널 <span class="t_green">L</span> <strong class="t_red">26,500</strong></a></li>
-                            <li><a href="#" class="option">오리지널 <span class="t_green">F</span> <strong class="t_red">30,900</strong></a></li>
-                            <li><a href="#" class="option">오리지널 <span class="t_green">P</span> <strong class="t_red">37,500</strong></a></li>
-                        </ul>
-                    </div>
-                    <span class="inp_spinner" data-min="1" data-max="10">							
-                        <span>
-                            <input class="input" type="text" value="1" readonly="readonly">
-                        </span>
-                        <a href="#" class="btn btn_minus"><span class="blind">빼기</span></a>
-                        <a href="#" class="btn btn_plus"><span class="blind">더하기</span></a>					
-                    </span>
-                </div>
-            </div>
-            <div class="pop_btn button_wrap btn2">
-                <a href="#" class="button btn_black">상세보기</a>
-                <a href="#" class="button btn_green">담기</a>
-            </div>
-        </div>
-        <a href="#" class="btn_close pop_close">CLOSE</a>
-    </article>
-</div>
-
-<!-- 보유쿠폰 팝업 -->
-<div id="popMycoupon" class="pop_bg">
-    <article class="pop_wrap w600">
-        <div class="pop_head">
-            <h1>보유쿠폰</h1>
-        </div>
-        <div class="pop_cont">
-            <ul class="coupon_list small">
-                <li>
-                    <div class="coupon">
-                        <div>
-                            <i class="logo">파파존스</i>
-                            <p class="name">(KB30)KB 국민카드 라지사이즈 이상 피자 주문 시 10,000원 할인 + 콜라1.25L 무료 </p>
-                            <ul class="info">
-                                <li>
-                                    <div class="left">2018/05/31</div>
-                                    <div class="right t_red">80일남음</div>
-                                </li>
-                                <li>
-                                    <div class="left t_black">1회사용가능</div>
-                                    <div class="right">
-                                        <i class="pc"><span class="blind">pc용</span></i>
-                                        <i class="mobile"><span class="blind">모바일용</span></i>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                        <div>
-                            <ul class="dot_list f14">
-                                <li>피자 라지 사이즈 이상</li>
-                                <li>BOX, 세트메뉴 및 중복할인 불가</li>
-                            </ul>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="coupon">
-                        <div>
-                            <i class="logo">파파존스</i>
-                            <p class="name">(KB30)KB 국민카드 라지사이즈 이상 피자 주문 시 10,000원 할인 + 콜라1.25L 무료 </p>
-                            <ul class="info">
-                                <li>
-                                    <div class="left">2018/05/31</div>
-                                    <div class="right t_red">80일남음</div>
-                                </li>
-                                <li>
-                                    <div class="left t_black">1회사용가능</div>
-                                    <div class="right">
-                                        <i class="pc"><span class="blind">pc용</span></i>
-                                        <i class="mobile"><span class="blind">모바일용</span></i>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                        <div>
-                            <ul class="dot_list f14">
-                                <li>피자 라지 사이즈 이상</li>
-                                <li>BOX, 세트메뉴 및 중복할인 불가</li>
-                            </ul>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="coupon">
-                        <div>
-                            <i class="logo">파파존스</i>
-                            <p class="name">(KB30)KB 국민카드 라지사이즈 이상 피자 주문 시 10,000원 할인 + 콜라1.25L 무료 </p>
-                            <ul class="info">
-                                <li>
-                                    <div class="left">2018/05/31</div>
-                                    <div class="right t_red">80일남음</div>
-                                </li>
-                                <li>
-                                    <div class="left t_black">1회사용가능</div>
-                                    <div class="right">
-                                        <i class="pc"><span class="blind">pc용</span></i>
-                                        <i class="mobile"><span class="blind">모바일용</span></i>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                        <div>
-                            <ul class="dot_list f14">
-                                <li>피자 라지 사이즈 이상</li>
-                                <li>BOX, 세트메뉴 및 중복할인 불가</li>
-                            </ul>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <div class="coupon">
-                        <div>
-                            <i class="logo">파파존스</i>
-                            <p class="name">(KB30)KB 국민카드 라지사이즈 이상 피자 주문 시 10,000원 할인 + 콜라1.25L 무료 </p>
-                            <ul class="info">
-                                <li>
-                                    <div class="left">2018/05/31</div>
-                                    <div class="right t_red">80일남음</div>
-                                </li>
-                                <li>
-                                    <div class="left t_black">1회사용가능</div>
-                                    <div class="right">
-                                        <i class="pc"><span class="blind">pc용</span></i>
-                                        <i class="mobile"><span class="blind">모바일용</span></i>
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                        <div>
-                            <ul class="dot_list f14">
-                                <li>피자 라지 사이즈 이상</li>
-                                <li>BOX, 세트메뉴 및 중복할인 불가</li>
-                            </ul>
-                        </div>
-                    </div>
-                </li>
-            </ul>
+            <br>
+            <div class="t_center">알럿 메세지를 보여줍니다.</div>
+            <br>
             <div class="pop_btn button_wrap">
-                <a href="#" class="button btn_gray pop_close">닫기</a>
+                <a href="#" class="button btn_black pop_close">확인</a>
             </div>
         </div>
         <a href="#" class="btn_close pop_close">CLOSE</a>
@@ -947,47 +539,12 @@ ex)alertTip('#userId','아이디를 확인해주세요')</textarea>
 </div>
 <!-- //popup -->
 
-<script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
 <script>
-//다음 주소검색
-daumPostcode('memberDaumZipcode','memberAddress1'); //회원
-daumPostcode('orderDaumZipcode','orderAddress1'); //주문
-
-function daumPostcode(mapId,inputId) {    
-    var mapWrap = document.getElementById(mapId);
-    new daum.Postcode({ 
-        oncomplete: function(data) {
-            // 검색결과 항목을 클릭했을때 실행할 코드를 작성하는 부분.
-
-            // 각 주소의 노출 규칙에 따라 주소를 조합한다.
-            // 내려오는 변수가 값이 없는 경우엔 공백('')값을 가지므로, 이를 참고하여 분기 한다.
-            var fullAddr = data.address; // 최종 주소 변수
-            var extraAddr = ''; // 조합형 주소 변수
-
-            // 기본 주소가 도로명 타입일때 조합한다.
-            if(data.addressType === 'R'){
-                //법정동명이 있을 경우 추가한다.
-                if(data.bname !== ''){
-                    extraAddr += data.bname;
-                }
-                // 건물명이 있을 경우 추가한다.
-                if(data.buildingName !== ''){
-                    extraAddr += (extraAddr !== '' ? ', ' + data.buildingName : data.buildingName);
-                }
-                // 조합형주소의 유무에 따라 양쪽에 괄호를 추가하여 최종 주소를 만든다.
-                fullAddr += (extraAddr !== '' ? ' ('+ extraAddr +')' : '');
-            }
-
-            // 우편번호와 주소 정보를 해당 필드에 넣는다.
-            //document.getElementById('postcode').value = data.zonecode; //5자리 새우편번호 사용
-            document.getElementById(inputId).value = fullAddr;
-        },        
-        width : '100%',
-        height : '480px'
-    }).embed(mapWrap, {
-        autoClose: false //기본값 true, 선택 후 자동닫힘 방지
+$(function(){
+    $(window).load(function(){
+        $('.pop_open').first().trigger('click');
     });
-}
+});
 </script>
 </body>
 </html>

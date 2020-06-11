@@ -354,7 +354,9 @@
             <div class="pop_head">
                 <h1>파파존스 TV광고</h1>
             </div>
-            <div class="youtube"></div>
+            <div class="youtube">
+                <iframe id="player" src="http://www.youtube.com/embed/_1ANOCQdkKo?enablejsapi=1&amp;amp;version=3&amp;amp;playerapiid=ytplayer&amp;amp;rel=0&amp;amp;autoplay=1&amp;amp;autohide=1&amp;amp;showinfo=0&amp;amp;wmode=opaque" allowfullscreen="allowfullscreen" frameborder="0" title="tv cf 영상"></iframe>
+            </div>
             <a href="#" class="btn_close pop_close">CLOSE</a>
         </article>
     </div>
@@ -368,13 +370,9 @@ $(function(){
         e.preventDefault();
         var $href = $(this).attr('href');
         
-        $('.youtube').empty().prepend('<iframe src="http://www.youtube.com/embed/'+$href+'?enablejsapi=1&amp;amp;version=3&amp;amp;playerapiid=ytplayer&amp;amp;rel=0&amp;amp;autoplay=1&amp;amp;autohide=1&amp;amp;showinfo=0&amp;amp;wmode=opaque" allowfullscreen="allowfullscreen" frameborder="0" title="tv cf 영상"></iframe>');       
+        $("#player").attr({src:"http://www.youtube.com/embed/"+$href+"?enablejsapi=1&amp;version=3&amp;playerapiid=ytplayer&amp;rel=0&amp;autoplay=1&amp;autohide=1&amp;showinfo=0&amp;wmode=opaque"});
         popOpen('#popYoutube',this);
-    });
-    
-    $('#popYoutube .pop_close').click(function(){
-        $('.youtube').empty();
-    });
+    })
 });
 </script>
 </body>
