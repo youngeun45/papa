@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title> 코딩리스트 </title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.min.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.css" />
+<!-- <link rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/notosanskr.css" /> -->
+<style type="text/css">	
+	body{font:normal 13px/1.5 'Noto Sans KR',Malgun Gothic,'맑은고딕', sans-serif, Arial, Verdana;color:#666;margin:0;}
+	h1, h2, h3, h4, h5, h6{color:#000;}
+	fieldset,ul, ol, dl, dt, dd, p, button, figure{margin:0;padding:0;}
+	legend, caption{width:0;height:0;visibility:hidden;font-size:0;line-height:0;}
+	em, a , input, textarea, keygen, select, button, isindex, i{font-style:normal;text-decoration:none;color:#666;}
+	fieldset, button{background:none;border:0px;}
+	ul:after,ol:after,,dl:after{content:'';display:block;clear:both;}
+	li{list-style:none;}
+	img{vertical-align:middle;}
+	table{width:100%;border-spacing:0px;border-collapse:collapse;table-layout:fixed;}
+	th, td{word-break:break-all;}
+	iframe{width:100%;vertical-align:middle;}
+	hr{border:0 none;height:1px;background:#e3e3e3;}
+	
+	.wrap{padding:10px;max-width:1200px;margin:0 auto;}
+	.table{border-top:1px solid #666;border-bottom:2px solid #999;margin-bottom:20px;}
+	.table table{width:100%;}
+	.table table thead th{padding:5px;background:#e4e4e4;border-left:1px solid #c3c3c3;border-bottom:1px solid #666;color:#333;}
+	.table table tbody td{padding:5px;border-top:1px solid #c3c3c3;border-left:1px solid #c3c3c3;}
+	.table table tbody th{text-align:center;background:#f9f9f9;color:#515151;border-top:1px solid #c3c3c3;}
+	.table table tbody tr:first-child th, .table table tbody tr:first-child td{border-top:0;}
+	.table table th:first-child, .table table tbody td:first-child{border-left:0;}
+	.table table tbody tr:hover th, 
+	.table table tbody tr:hover td{background:#f5f5f5 !important;}
+	.table table tbody tr:hover td a{color:red;}
+	.table a{text-decoration:underline;}
+	.table .sky th, .table .sky td{background:#d2f6f6;color:#000;}
+	.table .yellow td{background:#ffeeca;color:#000;}
+	.table .yellow td:first-child{background:none;}
+	.table .line th, .table .line td{border-top-color:#666;}
+	
+	.text_box{padding:10px;margin-bottom:10px;color:#666;border:2px solid #ccc;line-height:1.5;}
+	.text_box strong{display:inline-block;}
+	.text_box strong:first-child{padding-left:0;}
+	.text_box span{display:inline-block;width:10px;height:10px;vertical-align:center;}
+	
+	.red{color:red;}
+	.blue{color:blue;}
+
+	.midline{text-decoration:line-through;color: #aaa;}
+
+@media only screen and (max-width:760px ){
+	.table{overflow-y:auto;}
+	.table table{table-layout:auto;}
+	th, td{white-space:nowrap;font-size:11px;}
+}
+</style>
+
+<!--[if lt IE 9]>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js"></script>
+<![endif]-->
+<script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+<script src="https://code.jquery.com/jquery-migrate-1.4.1.min.js"></script>
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+</head>
+<body>	
+	<section class="wrap">
+		<h1>파파존스 리뉴얼</h1>
+		<div class="text_box">
+			<p>* 문서타입 : HTML5 / CSS3</p>
+			<p>* 반응형 : 1280px / 1024px / 760px / 480px </p>
+			<p>* gulp : gulp-sass, gulp-minify, gulp-imagemin, gulp.spritesmith, gulp-browserify, gulp-autoprefixer</p>
+		</div>
+		<div class="table">
+			<table>
+			<colgroup>
+				<col width="15%">
+				<col width="15%">
+				<col width="15%">
+				<col width="25%">
+				<col width="*">
+			</colgroup>
+			<thead>
+			<tr>
+				<th>1depth</th>
+				<th>2depth</th>
+				<th>3depth</th>
+				<th>File</th>
+				<th>Description</th>
+			</tr>
+			</thead>
+			<tbody>
+			<!-- ★관리자 -->
+			<tr class="line">
+				<th colspan="3" rowspan="4">가이드</th>
+				<td><a target="_blank" href="./html/guide.html">guide.html</a></td>
+				<td>스타일가이드</td>
+			</tr>
+			<tr>
+				<td><a target="_blank" href="./html/popup.html">popup.html</a></td>
+				<td>팝업1</td>
+			</tr>
+			<tr>
+				<td><a target="_blank" href="./html/popup2.html">popup2.html</a></td>
+				<td>팝업2</td>
+			</tr>
+			<tr>
+				<td><a target="_blank" href="./html/sub.html">sub.html</a></td>
+				<td>서브레이아웃</td>
+			</tr>
+
+			<tr class="line">
+				<th>메인</th>
+				<td></td>
+				<td></td>
+				<td><a target="_blank" href="./html/index.html">index.html</a></td>
+				<td><strong class="red">퀵메뉴(멤버쉽, 원클릭주문), <br>탑메뉴(장바구니) 영역확인가능</strong></td>
+			</tr>
+
+			<tr class="line">
+				<th rowspan="7">메뉴</th>
+				<td>리스트</td>
+				<td></td>
+				<td><a target="_blank" href="./html/menu/menuList.html">menuList.html</a></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>상세</td>
+				<td></td>
+				<td><a target="_blank" href="./html/menu/menuView.html">menuView.html</a></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>하프&amp;하프</td>
+				<td></td>
+				<td><a target="_blank" href="./html/menu/halfAndHalf.html">halfAndHalf.html</a></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>온라인특가</td>
+				<td></td>
+				<td><a target="_blank" href="./html/menu/onlineSpecial.html">onlineSpecial.html</a></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>사이드반값</td>
+				<td></td>
+				<td><a target="_blank" href="./html/menu/sideDC.html">sideDC.html</a></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>나만의세트</td>
+				<td></td>
+				<td><a target="_blank" href="./html/menu/makeSet.html">makeSet.html</a></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>E-쿠폰</td>
+				<td></td>
+				<td><a target="_blank" href="./html/menu/eCoupon.html">eCoupon.html</a></td>
+				<td></td>
+			</tr>
+
+			<tr class="line">
+				<th rowspan="9">이벤트&amp;할인</th>
+				<td>이달의 프로모션</td>
+				<td></td>
+				<td><a target="_blank" href="./html/event/promotion.html">promotion.html</a></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td rowspan="2">진행중인 이벤트</td>
+				<td></td>
+				<td><a target="_blank" href="./html/event/ingList.html">ingList.html</a></td>
+				<td>리스트</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><a target="_blank" href="./html/event/ingView.html">ingView.html</a></td>
+				<td>상세</td>
+			</tr>
+			<tr>
+				<td>매장별 이벤트</td>
+				<td></td>
+				<td><a target="_blank" href="./html/event/storeEvent.html">storeEvent.html</a></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>제휴안내</td>
+				<td></td>
+				<td><a target="_blank" href="./html/event/partnership.html">partnership.html</a></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>스페셜할인이벤트</td>
+				<td></td>
+				<td><a target="_blank" href="./html/event/special.html">special.html</a></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td rowspan="2">지난 이벤트</td>
+				<td></td>
+				<td><a target="_blank" href="./html/event/endList.html">endList.html</a></td>
+				<td>리스트</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><a target="_blank" href="./html/event/endView.html">endView.html</a></td>
+				<td>상세</td>
+			</tr>
+			<tr>
+				<td>쿠폰발급</td>
+				<td></td>
+				<td><a target="_blank" href="./html/event/coupon.html">coupon.html</a></td>
+				<td></td>
+			</tr>
+
+			<tr class="line">
+				<th>매장안내</th>
+				<td>매장검색</td>
+				<td></td>
+				<td><a target="_blank" href="./html/store/findStore.html">findStore.html</a></td>
+				<td></td>
+			</tr>
+
+			<tr class="line">
+				<th rowspan="4">고객선터</th>				
+				<td rowspan="2">공지사항</td>
+				<td></td>
+				<td><a target="_blank" href="./html/cscenter/noticeLIst.html">noticeLIst.html</a></td>
+				<td>리스트</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><a target="_blank" href="./html/cscenter/noticeView.html">noticeView.html</a></td>
+				<td>상세</td>
+			</tr>
+			<tr>
+				<td>자주묻는질문</td>
+				<td></td>
+				<td><a target="_blank" href="./html/cscenter/faq.html">faq.html</a></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>직접문의</td>
+				<td></td>
+				<td><a target="_blank" href="./html/cscenter/qna.html">qna.html</a></td>
+				<td></td>
+			</tr>
+
+			<tr class="line">
+				<th rowspan="7">회사소개</th>				
+				<td>회사소개</td>
+				<td></td>
+				<td><a target="_blank" href="./html/papajohns/history.html">history.html</a></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>피자이야기</td>
+				<td></td>
+				<td><a target="_blank" href="./html/papajohns/pizzaStory.html">pizzaStory.html</a></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>창립이야기</td>
+				<td></td>
+				<td><a target="_blank" href="./html/papajohns/builder.html">builder.html</a></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>TV광고</td>
+				<td></td>
+				<td><a target="_blank" href="./html/papajohns/cf.html">cf.html</a></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>사회공헌활동</td>
+				<td></td>
+				<td><a target="_blank" href="./html/papajohns/contribution.html">contribution.html</a></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>보도자료</td>
+				<td></td>
+				<td><a target="_blank" href="./html/papajohns/press.html">press.html</a></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>채용공고</td>
+				<td></td>
+				<td><a target="_blank" href="./html/papajohns/recruit.html">recruit.html</a></td>
+				<td></td>
+			</tr>
+
+			<tr class="line">
+				<th rowspan="4">가맹점모집</th>				
+				<td>가맹조건</td>
+				<td></td>
+				<td><a target="_blank" href="./html/franchise/qualification.html">qualification.html</a></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>가맹절차</td>
+				<td></td>
+				<td><a target="_blank" href="./html/franchise/process.html">process.html</a></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>상담신청 및 문의</td>
+				<td></td>
+				<td><a target="_blank" href="./html/franchise/consult.html">consult.html</a></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>파파존스이야기</td>
+				<td></td>
+				<td><a target="_blank" href="./html/franchise/papaStory.html">papaStory.html</a></td>
+				<td></td>
+			</tr>
+
+			<tr class="line">
+				<th rowspan="6">온라인주문</th>				
+				<td>주소선택</td>
+				<td></td>
+				<td><a target="_blank" href="./html/order/address.html">address.html</a></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>매장선택</td>
+				<td></td>
+				<td><a target="_blank" href="./html/order/store.html">store.html</a></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>원클릭</td>
+				<td></td>
+				<td><a target="_blank" href="./html/order/oneclick.html">oneclick.html</a></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>장바구니</td>
+				<td></td>
+				<td><a target="_blank" href="./html/order/cart.html">cart.html</a></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>결제</td>
+				<td></td>
+				<td><a target="_blank" href="./html/order/payment.html">payment.html</a></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>결제완료</td>
+				<td></td>
+				<td><a target="_blank" href="./html/order/complete.html">complete.html</a></td>
+				<td></td>
+			</tr>
+			
+			<tr class="line">
+				<th rowspan="8">회원</th>				
+				<td>로그인</td>
+				<td></td>
+				<td><a target="_blank" href="./html/member/login.html">login.html</a></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>아이디/ 비번찾기</td>
+				<td></td>
+				<td><a target="_blank" href="./html/member/find.html">find.html</a></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td rowspan="4">회원가입</td>
+				<td><span class="midline">본인인증</span></td>
+				<td><a target="_blank" href="./html/member/join1.html">join1.html</a></td>
+				<td>인증 변경으로 미사용</td>
+			</tr>
+			<tr>
+				<td>약관동의</td>
+				<td><a target="_blank" href="./html/member/joinAgree.html">joinAgree.html</a></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>정보입력</td>
+				<td><a target="_blank" href="./html/member/joinInfo.html">joinInfo.html</a></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>가입완료</td>
+				<td><a target="_blank" href="./html/member/joinSuccess.html">joinSuccess.html</a></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>비밀번호변경</td>
+				<td></td>
+				<td><a target="_blank" href="./html/member/passwordEdit.html">passwordEdit.html</a></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>비회원주문조회</td>
+				<td></td>
+				<td><a target="_blank" href="./html/member/nonMemberOrder.html">nonMemberOrder.html</a></td>
+				<td></td>
+			</tr>
+
+			<tr class="line">
+				<th rowspan="6">마이페이지</th>
+				<td>나의 등급확인</td>
+				<td></td>
+				<td><a target="_blank" href="./html/mypage/myMembership.html">myMembership.html</a></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td rowspan="2">이전주문내역</td>
+				<td></td>
+				<td><a target="_blank" href="./html/mypage/myOrderList.html">myOrderList.html</a></td>
+				<td>리스트</td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><a target="_blank" href="./html/mypage/myOrderView.html">myOrderView.html</a></td>
+				<td>상세</td>
+			</tr>
+			<tr>
+				<td rowspan="2">보유쿠폰확인</td>
+				<td>사용가능쿠폰</td>
+				<td><a target="_blank" href="./html/mypage/myCoupon.html">myCoupon.html</a></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>사용완료쿠폰</td>
+				<td><a target="_blank" href="./html/mypage/myCouponUsed.html">myCouponUsed.html</a></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>개인정보수정</td>
+				<td></td>
+				<td><a target="_blank" href="./html/mypage/myInfo.html">myInfo.html</a></td>
+				<td></td>
+			</tr>
+
+			<tr class="line">
+				<th rowspan="3">기타</th>
+				<td>사이트맵</td>
+				<td></td>
+				<td><a target="_blank" href="./html/etc/sitemap.html">sitemap.html</a></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>이용약관</td>
+				<td></td>
+				<td><a target="_blank" href="./html/etc/terms.html">terms.html</a></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td>개인정보처리방침</td>
+				<td></td>
+				<td><a target="_blank" href="./html/etc/privacy.html">privacy.html</a></td>
+				<td></td>
+			</tr>
+
+			</tbody>
+			</table>
+		</div>
+
+		
+
+	</section>
+	<!-- //contents -->
+
+</body>
+</html>
